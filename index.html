@@ -360,6 +360,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#future-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Plans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disclaimer
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -749,6 +771,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#future-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Plans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disclaimer
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -769,7 +813,8 @@
 <h1 id="packetflow-homelab-documentation">Packetflow Homelab Documentation</h1>
 <h2 id="welcome">Welcome</h2>
 <p>Welcome to the documentation for the <strong>Packetflow Homelab</strong>.<br />
-This project serves as a practical testing ground for Network Engineering concepts, specifically focusing on <strong>CCNA certification</strong> topics and <strong>IPv6 implementation</strong>.</p>
+This project serves as a practical testing ground for network engineering concepts, specifically focusing on <strong>CCNA certification</strong> topics and <strong>IPv6 implementation</strong>.
+It's been quickly thrown together and is subject to many changes.</p>
 <h2 id="lab-overview">Lab Overview</h2>
 <p>The homelab is designed to mimic a small enterprise network with distinct layers for Core, Distribution, and Access.</p>
 <ul>
@@ -778,7 +823,7 @@ This project serves as a practical testing ground for Network Engineering concep
 <li><strong>Wireless/Access:</strong> MikroTik hAP ac lite (handling WiFi, Bridge Filtering).</li>
 </ul>
 <h2 id="documentation-structure">Documentation Structure</h2>
-<p>The documentation is organized into focused logical sections within the <strong>Network</strong> module:</p>
+<p>The documentation is currently focused on networking, and has been structured into sections within the <strong>Network</strong> module:</p>
 <h3 id="1-hardware">1. <a href="01_network/01_hardware/">Hardware</a></h3>
 <p>Detailed inventory of all physical devices, cabling maps, and the physical topology showing how the ISP Modem, FortiGate, and downstream switches connect.</p>
 <h3 id="2-addressing">2. <a href="01_network/02_addressing/">Addressing</a></h3>
@@ -789,13 +834,13 @@ This project serves as a practical testing ground for Network Engineering concep
     due to ISP (modem) constraints, ensuring stable internal IPv6 routing and learning opportunities.</li>
 </ul>
 <h3 id="3-routing-switching">3. <a href="01_network/03_routing_switching/">Routing &amp; Switching</a></h3>
-<p>Covers the "Brain" of the network.</p>
+<p>Covers <strong>routing and switching</strong> configuration and decisions inside the network.</p>
 <ul>
 <li><strong>Switching:</strong> 802.1Q Trunks, Native VLAN security, and Bridge VLAN Filtering on MikroTik.  </li>
-<li><strong>Routing:</strong> Inter-VLAN routing logic and IPv6 Router Advertisements (RA).</li>
+<li><strong>Routing:</strong> Inter-VLAN routing and IPv6 Router Advertisements (RA).</li>
 </ul>
 <h3 id="4-security">4. <a href="01_network/04_security/">Security</a></h3>
-<p>Documents the <strong>Positive Security Model</strong>.  </p>
+<p>Documents the <strong>Security policies</strong> used.  </p>
 <ul>
 <li><strong>Zones:</strong> Trusted vs Untrusted vs Management.  </li>
 <li><strong>Policies:</strong> Specific firewall rules allowing traffic (e.g., VLAN 10/20 to Internet) while blocking inter-VLAN access by default.  </li>
@@ -803,7 +848,18 @@ This project serves as a practical testing ground for Network Engineering concep
 <h3 id="5-sd-wan">5. <a href="01_network/05_sd_wan/">SD-WAN</a></h3>
 <p>Configuration of the <code>virtual-wan-link</code> interface to abstract WAN connectivity and prepare for future multi-path scenarios.  </p>
 <h3 id="6-wireless">6. <a href="01_network/06_wireless/">Wireless</a></h3>
-<p>Design decisions for the <code>MikroTik</code> and <code>Declerck-Cardon</code> SSIDs, frequency planning, and security standards.  </p>
+<p>Design decisions for the <code>Declerck-Cardon</code> SSID, frequency planning, and security standards.  </p>
+<h2 id="future-plans">Future Plans</h2>
+<ul>
+<li>Add another hAP ac lite to act as second switch.</li>
+<li>Add another router to act as remote/branch office router.</li>
+<li>Replace my current Telenet modem with a new one to support IPv6 Global Unicast Addressing in all VLANs.<br />
+    So far i've managed to get it working in one VLAN.  </li>
+<li>Setup a DNS server with dynamic DNS.</li>
+</ul>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>The documentation is written with the help of Google Gemini.<br />
+The decisions made are based on my own knowledge and experience. </p>
 
 
 

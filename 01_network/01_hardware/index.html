@@ -728,7 +728,8 @@
 
 <h1 id="hardware-physical-infrastructure">Hardware &amp; Physical Infrastructure</h1>
 <h2 id="1-overview">1. Overview</h2>
-<p>This document defines the physical layer (OSI Layer 1) of the Packetflow Homelab. It covers hardware specifications, physical cabling, and port assignments across the core infrastructure.</p>
+<p>This document defines the physical layer (OSI Layer 1) of the Packetflow Homelab.<br />
+It covers hardware specifications, physical cabling, and port assignments across the core infrastructure.  </p>
 <h2 id="2-hardware-inventory">2. Hardware Inventory</h2>
 <table>
 <thead>
@@ -743,14 +744,14 @@
 <tr>
 <td style="text-align: left;"><strong>Router / Firewall</strong></td>
 <td style="text-align: left;">Fortinet FortiGate 40F</td>
-<td style="text-align: left;"><code>FG40F</code></td>
+<td style="text-align: left;"><code>FW01</code></td>
 <td style="text-align: left;">Main internet gateway and security appliance.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Core Switch</strong></td>
 <td style="text-align: left;">Ubiquiti EdgeSwitch 8 PoE</td>
-<td style="text-align: left;"><code>ES-8-150W</code></td>
-<td style="text-align: left;">Managed L3 switch providing PoE to APs and connectivity to servers.</td>
+<td style="text-align: left;"><code>ALS01</code></td>
+<td style="text-align: left;">Managed L2 switch providing PoE to APs and connectivity to servers.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Access Point</strong></td>
@@ -766,10 +767,10 @@
 </tr>
 </tbody>
 </table>
+<p>Note: All hosts are part of the <code>lab.internal.packetflow.be</code> domain. So <code>FW01</code> can be reached internaly as <code>fw01.lab.internal.packetflow.be</code>.</p>
 <h2 id="3-physical-topology">3. Physical Topology</h2>
 <p>The network centers around a "Core Rack" configuration where the FortiGate handles WAN and the EdgeSwitch handles internal distribution.</p>
-<p><strong>[Image Placeholder: Physical Topology Diagram]</strong>
-<em>Diagram to be added later showing connections between ISP Modem, FortiGate, EdgeSwitch, and AP/Servers.</em></p>
+<p><strong>[Image Placeholder: Physical Topology Diagram]</strong></p>
 <h2 id="4-cabling-port-map">4. Cabling &amp; Port Map</h2>
 <h3 id="fortigate-40f">FortiGate 40F</h3>
 <table>
@@ -789,13 +790,19 @@
 <td style="text-align: left;">Public IP via DHCP/PPPoE</td>
 </tr>
 <tr>
-<td style="text-align: left;">A</td>
+<td style="text-align: left;">1</td>
 <td style="text-align: left;">RJ45</td>
-<td style="text-align: left;">EdgeSwitch 8 PoE</td>
+<td style="text-align: left;">AP01</td>
+<td style="text-align: left;">HAP AC Lite currently used as AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">RJ45</td>
+<td style="text-align: left;">ALS01</td>
 <td style="text-align: left;">Main Trunk Link (Carries all VLANs)</td>
 </tr>
 <tr>
-<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
 <td style="text-align: left;">RJ45</td>
 <td style="text-align: left;"><em>Reserved</em></td>
 <td style="text-align: left;">Emergency Management / Direct Access</td>
@@ -816,26 +823,19 @@
 <tr>
 <td style="text-align: left;">1</td>
 <td style="text-align: left;">Trunk</td>
-<td style="text-align: left;"><strong>MikroTik AP01</strong></td>
-<td style="text-align: left;">24V Passive</td>
+<td style="text-align: left;"><strong>uplink to FW01</strong></td>
+<td style="text-align: left;">POE+ (0W)</td>
 </tr>
 <tr>
-<td style="text-align: left;">2-7</td>
+<td style="text-align: left;">2-8</td>
 <td style="text-align: left;">Access/Trunk</td>
 <td style="text-align: left;">Servers / IoT</td>
 <td style="text-align: left;"><em>As needed</em></td>
-</tr>
-<tr>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">Trunk</td>
-<td style="text-align: left;"><em>Uplink / Reserved</em></td>
-<td style="text-align: left;">-</td>
 </tr>
 </tbody>
 </table>
 <h3 id="mikrotik-hap-ac-lite-ap01">MikroTik hAP ac lite (AP01)</h3>
 <p><em>Radio Configuration:</em>
-- <strong>wlan1 (2.4GHz):</strong> Management / Legacy
 - <strong>wlan2 (5GHz):</strong> High-speed clients</p>
 
 
