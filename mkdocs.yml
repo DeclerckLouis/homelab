@@ -1,0 +1,15 @@
+site_name: HomeLab Documentation
+site_url: https://lab.packetflow.be
+theme: 
+  name: material
+
+nav:
+  - Home: index.md
+  - Network:
+      - Overview: 01_network/overview.md
+      - Hardware: 01_network/01_hardware.md
+      - Addressing: 01_network/02_addressing.md
+      - Routing & Switching: 01_network/03_routing_switching.md
+      - Security: 01_network/04_security.md
+      - SD-WAN: 01_network/05_sd_wan.md
+      - Wireless: 01_network/06_wireless.md
