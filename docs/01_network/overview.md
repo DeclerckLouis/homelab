@@ -5,13 +5,13 @@ This document details the network topology, addressing schemes, and security pol
 The network provides an (un)stable experimental environment while also serving my Home WiFi.  
 It's subject to many changes and should **not** be considered a production environment.
 
-**Key Stats:**
-* **Primary Domain:** `packetflow.be` (Subdomain: `lab.internal.packetflow.be`)
-* **Router/Firewall:** FortiGate 40F
-* **Core Switch:** Ubiquiti EdgeSwitch 8 PoE
-* **Wireless:** MikroTik hAP ac lite
-* **Site CIDR:** `10.10.0.0/16` (Home)
-* **Remote Branch Office CIDR:** `10.20.0.0/16` (Not yet implemented)
+**Key Stats:**  
+- **Primary Domain:** `packetflow.be` (Subdomain: `lab.internal.packetflow.be`)  
+- **Router/Firewall:** FortiGate 40F  
+- **Core Switch:** Ubiquiti EdgeSwitch 8 PoE  
+- **Wireless:** MikroTik hAP ac lite  
+- **Site CIDR:** `10.10.0.0/16` (Home)  
+- **Remote Branch Office CIDR:** `10.20.0.0/16` (Not yet implemented)  
 ---
 
 ## 2. Basic Principles
