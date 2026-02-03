@@ -2,15 +2,15 @@
 
 ## Welcome
 Welcome to the documentation for the **Packetflow Homelab**.  
-This project serves as a practical testing ground for network engineering concepts, specifically focusing on **CCNA certification** topics and **IPv6 implementation**.
-It's been quickly thrown together and is subject to many changes.
+This project serves as a practical testing ground for network engineering concepts,  
+specifically focusing on **CCNA certification** topics and **IPv6 implementation**.
+**THIS IS NOT A PROD GUIDELINE, IT CAN BE FULL OF MISTAKES**
 
 ## Lab Overview
-The homelab is designed to mimic a small enterprise network with distinct layers for Core, Distribution, and Access.
 
-- **Primary Router:** Fortinet FortiGate 40F (handling Routing, Security, SD-WAN).
-- **Core Switching:** Ubiquiti EdgeSwitch 8 PoE (handling VLANs, PoE).
-- **Wireless/Access:** MikroTik hAP ac lite (handling WiFi, Bridge Filtering).
+- **Primary Router:** Fortinet FortiGate 40F (handling Routing, Security, SD-WAN).  
+- **Core Switching:** Ubiquiti EdgeSwitch 8 PoE (handling VLANs, PoE).  
+- **Wireless/Access:** MikroTik hAP ac lite (handling WiFi, Bridge Filtering).  
 
 ## Documentation Structure
 The documentation is currently focused on networking, and has been structured into sections within the **Network** module:
