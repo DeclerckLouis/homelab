@@ -12,7 +12,6 @@ The EdgeSwitch acts as the central L2 distribution point.
 - **VLANs:** 10, 20, 30, 35, 99 defined database.
 - **Trunk Ports:** Tagged traffic for all active VLANs. 
   - **Native VLAN:** Set to **666 (Blackhole)** on uplinks to prevent VLAN hopping attacks.
-- **Access Ports:** Untagged for specific VLANs (e.g., Server links).
 - **Spanning Tree:** RSTP enabled to prevent loops.
 
 ### 2.2. MikroTik (Access)
@@ -30,10 +29,10 @@ The MikroTik `hAP ac lite` uses **Bridge VLAN Filtering**.
 - **Inter-VLAN Routing:** Performed by FortiGate. Default DENY. strict firewall policies required to allow traffic.
 - **Default Route:** `0.0.0.0/0` via WAN interface (DHCP/PPPoE from ISP).
 
-### 3.2. IPv6 Routing
+### 3.2. General Routing (IPv6)
 - **Method:** **Router Advertisements (RA)** with SLAAC/DHCPv6.
 - **ULA Advertisement:** 
-  - The FortiGate is configured to advertise the ULA prefix `fdb1:6575:ad8a::/48` on each interface.
+  - The FortiGate is configured to advertise the ULA prefix `fdb1:6575:ad8a:x::/64` on each VLAN interface. (with `x` being the VLAN ID)
   - **Flags:** `Managed (M)` flag OFF, `Other (O)` flag ON (Stateless DHCPv6 for DNS).
   - Use `radvd` or FortiOS `config ipv6` settings to ensure the 'A' (Autonomous) flag is set so clients auto-configure addresses.
 
