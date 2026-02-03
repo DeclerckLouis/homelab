@@ -650,7 +650,8 @@
 
 <h1 id="sd-wan-configuration">SD-WAN Configuration</h1>
 <h2 id="1-overview">1. Overview</h2>
-<p>Software-Defined WAN (SD-WAN) is used to abstract the underlying WAN connectivity. Even with a single uplink, using the SD-WAN interface (<code>virtual-wan-link</code>) allows for easier policy management and future expansion (e.g., adding LTE failover).</p>
+<p>Software-Defined WAN (SD-WAN) is used to abstract the underlying WAN connectivity.<br />
+Even with a single uplink, using the SD-WAN interface (<code>virtual-wan-link</code>) allows for easier policy management and future expansion (e.g., adding LTE failover).  </p>
 <h2 id="2-sd-wan-members">2. SD-WAN Members</h2>
 <table>
 <thead>
@@ -671,9 +672,9 @@
 </tbody>
 </table>
 <h2 id="3-sd-wan-rules">3. SD-WAN Rules</h2>
-<p>Currently, the default implicit rule is in effect:
-- <strong>Algorithm:</strong> Source IP based load balancing (effectively single path with one member).
-- <strong>Destination:</strong> <code>0.0.0.0/0</code> redirects to <code>virtual-wan-link</code>.</p>
+<p>Currently, the default implicit rule is in effect:<br />
+- <strong>Algorithm:</strong> Source IP based load balancing (effectively single path with one member).<br />
+- <strong>Destination:</strong> <code>0.0.0.0/0</code> redirects to <code>virtual-wan-link</code>.  </p>
 <h2 id="4-sla-targets">4. SLA Targets</h2>
 <p><em>No specific SLA targets (Jitter/Packet Loss) configured at this time.</em></p>
 

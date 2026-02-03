@@ -650,22 +650,32 @@
 
 <h1 id="security-policies">Security &amp; Policies</h1>
 <h2 id="1-overview">1. Overview</h2>
-<p>The security posture follows a <strong>Positive Security Model</strong>: everything is blocked by default unless explicitly allowed. The <strong>FortiGate 40F</strong> acts as the Zone-Based Firewall.</p>
+<p>The <strong>FortiGate 40F</strong> acts as a stateful firewall.<br />
+The security posture follows <strong>zone-based</strong> approach;<br />
+Traffic is grouped by source interface/VLAN to simplify policy management.<br />
+I'm also using an <strong>implicit deny rule</strong> at the end of the policy list.  </p>
 <h2 id="2-firewall-zones">2. Firewall Zones</h2>
 <p>Traffic is grouped by source interface/VLAN to simplify policy management.</p>
 <ul>
-<li><strong>Trusted:</strong> VLAN 10 (Home), VLAN 20 (Guest)</li>
-<li><strong>Untrusted:</strong> WAN (Internet)</li>
-<li><strong>Management:</strong> VLAN 99</li>
-<li><strong>Emergency:</strong> LAN3 (Physical port for recovery)</li>
+<li><strong>LAN_Trusted:</strong> VLAN 10 (Default)  </li>
+<li><strong>LAN_Guest:</strong> VLAN 20 (Guest)  </li>
+<li><strong>SRV_Servers:</strong> VLAN 30 (Servers)  </li>
+<li><strong>SRV_DMZ:</strong> VLAN 35 (DMZ)  </li>
+<li><strong>WAN_Internet:</strong> WAN (Internet)  </li>
+<li><strong>LAN_MGMT:</strong> VLAN 99 (Management), INT03 (Emergency)  </li>
 </ul>
+<p>Note:  I only have 2 Linux servers and no printers (yet).<br />
+I'm currently running 2 linux servers (grafana and netbox, neither are DMZ)
+A future server for the DMZ will be my HAProxy<br />
+An IOT VLAN will follow as well with printers (VLAN31 IOT) which will get it's own zone.</p>
 <h2 id="3-firewall-policies">3. Firewall Policies</h2>
 <p>The following policies are currently active on the FortiGate:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">ID</th>
 <th style="text-align: left;">Name</th>
+<th style="text-align: left;">From</th>
+<th style="text-align: left;">To</th>
 <th style="text-align: left;">Source</th>
 <th style="text-align: left;">Destination</th>
 <th style="text-align: left;">Action</th>
@@ -676,40 +686,66 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>4</strong></td>
-<td style="text-align: left;"><code>Allow default VLANs to BSI and mail</code></td>
-<td style="text-align: left;">VLAN 10, VLAN 20</td>
-<td style="text-align: left;"><code>virtual-wan-link</code> (Internet)</td>
+<td style="text-align: left;"><code>Allow default VLAN to BSI and mail</code></td>
+<td style="text-align: left;">VLAN 10</td>
+<td style="text-align: left;"><code>virtual-wan-link</code></td>
+<td style="text-align: left;">(4)VLAN10 address</td>
+<td style="text-align: left;">(4)all</td>
 <td style="text-align: left;"><strong>ACCEPT</strong></td>
 <td style="text-align: left;">Enabled</td>
 <td style="text-align: left;">ICMP, HTTP/S, Email, ScreenConnect</td>
 <td style="text-align: left;">General internet access for users.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>5</strong></td>
-<td style="text-align: left;"><code>Allow mgmt to everything</code></td>
-<td style="text-align: left;">VLAN 99</td>
-<td style="text-align: left;">ANY</td>
+<td style="text-align: left;"><code>Allow guest VLAN to BSI and mail</code></td>
+<td style="text-align: left;">VLAN 20</td>
+<td style="text-align: left;"><code>virtual-wan-link</code></td>
+<td style="text-align: left;">(4)VLAN20 address</td>
+<td style="text-align: left;">(4)all</td>
 <td style="text-align: left;"><strong>ACCEPT</strong></td>
 <td style="text-align: left;">Enabled</td>
-<td style="text-align: left;">ALL_ICMP, SNMP, SSH, DNS, NTP, etc.</td>
+<td style="text-align: left;">ALL_ICMP, HTTP/S, Email</td>
+<td style="text-align: left;">General internet access for guests.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Allow mgmt to internet with NAT</code></td>
+<td style="text-align: left;">VLAN 99</td>
+<td style="text-align: left;"><code>virtual-wan-link</code></td>
+<td style="text-align: left;">(4)VLAN99 address</td>
+<td style="text-align: left;">(4)all</td>
+<td style="text-align: left;"><strong>ACCEPT</strong></td>
+<td style="text-align: left;">Enabled</td>
+<td style="text-align: left;">ALL</td>
 <td style="text-align: left;">Unrestricted admin access.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>3</strong></td>
-<td style="text-align: left;"><code>Allow emergency to internet</code></td>
-<td style="text-align: left;">lan3</td>
+<td style="text-align: left;"><code>Allow mgmt to everywhere</code></td>
+<td style="text-align: left;">VLAN 99</td>
+<td style="text-align: left;">ANY</td>
+<td style="text-align: left;">(4)VLAN99 address</td>
+<td style="text-align: left;">(4)all</td>
+<td style="text-align: left;"><strong>ACCEPT</strong></td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">ALL</td>
+<td style="text-align: left;">Unrestricted admin access.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Allow emergency internet access</code></td>
+<td style="text-align: left;">INT03</td>
 <td style="text-align: left;"><code>virtual-wan-link</code></td>
+<td style="text-align: left;">(4)all</td>
+<td style="text-align: left;">(4)all</td>
 <td style="text-align: left;"><strong>ACCEPT</strong></td>
 <td style="text-align: left;">Enabled</td>
 <td style="text-align: left;">ALL</td>
 <td style="text-align: left;">Emergency internet access.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>2</strong></td>
 <td style="text-align: left;"><code>Allow emergency to everywhere</code></td>
-<td style="text-align: left;">lan3</td>
-<td style="text-align: left;"><code>mgmt</code></td>
+<td style="text-align: left;">INT03</td>
+<td style="text-align: left;"><code>down (mgmt)</code></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><strong>ACCEPT</strong></td>
 <td style="text-align: left;">Disabled</td>
 <td style="text-align: left;">ALL</td>

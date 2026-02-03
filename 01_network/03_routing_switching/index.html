@@ -491,10 +491,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-ipv6-routing" class="md-nav__link">
+  <a href="#32-general-routing-ipv6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. IPv6 Routing
+        3.2. General Routing (IPv6)
       
     </span>
   </a>
@@ -717,10 +717,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-ipv6-routing" class="md-nav__link">
+  <a href="#32-general-routing-ipv6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. IPv6 Routing
+        3.2. General Routing (IPv6)
       
     </span>
   </a>
@@ -771,7 +771,6 @@ The network uses <strong>Fortinet</strong> for L3 routing/firewalling and <stron
 <li><strong>VLANs:</strong> 10, 20, 30, 35, 99 defined database.</li>
 <li><strong>Trunk Ports:</strong> Tagged traffic for all active VLANs. </li>
 <li><strong>Native VLAN:</strong> Set to <strong>666 (Blackhole)</strong> on uplinks to prevent VLAN hopping attacks.</li>
-<li><strong>Access Ports:</strong> Untagged for specific VLANs (e.g., Server links).</li>
 <li><strong>Spanning Tree:</strong> RSTP enabled to prevent loops.</li>
 </ul>
 <h3 id="22-mikrotik-access">2.2. MikroTik (Access)</h3>
@@ -789,11 +788,11 @@ The network uses <strong>Fortinet</strong> for L3 routing/firewalling and <stron
 <li><strong>Inter-VLAN Routing:</strong> Performed by FortiGate. Default DENY. strict firewall policies required to allow traffic.</li>
 <li><strong>Default Route:</strong> <code>0.0.0.0/0</code> via WAN interface (DHCP/PPPoE from ISP).</li>
 </ul>
-<h3 id="32-ipv6-routing">3.2. IPv6 Routing</h3>
+<h3 id="32-general-routing-ipv6">3.2. General Routing (IPv6)</h3>
 <ul>
 <li><strong>Method:</strong> <strong>Router Advertisements (RA)</strong> with SLAAC/DHCPv6.</li>
 <li><strong>ULA Advertisement:</strong> </li>
-<li>The FortiGate is configured to advertise the ULA prefix <code>fdb1:6575:ad8a::/48</code> on each interface.</li>
+<li>The FortiGate is configured to advertise the ULA prefix <code>fdb1:6575:ad8a:x::/64</code> on each VLAN interface. (with <code>x</code> being the VLAN ID)</li>
 <li><strong>Flags:</strong> <code>Managed (M)</code> flag OFF, <code>Other (O)</code> flag ON (Stateless DHCPv6 for DNS).</li>
 <li>Use <code>radvd</code> or FortiOS <code>config ipv6</code> settings to ensure the 'A' (Autonomous) flag is set so clients auto-configure addresses.</li>
 </ul>

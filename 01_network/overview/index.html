@@ -345,6 +345,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#11-visualization-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Visualization &amp; Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2-basic-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -368,10 +379,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#layer-1-physical-topology" class="md-nav__link">
+  <a href="#layer-1-physical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 1: Physical Topology
+        Layer 1: Physical
       
     </span>
   </a>
@@ -379,10 +390,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-2-data-link-topology" class="md-nav__link">
+  <a href="#layer-2-data-link" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2: Data Link Topology
+        Layer 2: Data Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-3-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 3: Network
       
     </span>
   </a>
@@ -616,6 +638,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#11-visualization-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Visualization &amp; Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2-basic-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -639,10 +672,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#layer-1-physical-topology" class="md-nav__link">
+  <a href="#layer-1-physical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 1: Physical Topology
+        Layer 1: Physical
       
     </span>
   </a>
@@ -650,10 +683,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-2-data-link-topology" class="md-nav__link">
+  <a href="#layer-2-data-link" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2: Data Link Topology
+        Layer 2: Data Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-3-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 3: Network
       
     </span>
   </a>
@@ -686,14 +730,26 @@
 <h2 id="1-overview">1. Overview</h2>
 <p>This document details the network topology, addressing schemes, and security policies for the <strong>Packetflow Homelab</strong>.<br />
 The network provides an (un)stable experimental environment while also serving my Home WiFi.<br />
-It's subject to many changes and should <strong>not</strong> be considered a production environment.</p>
+It's subject to many changes and should <strong>not</strong> be considered a production environment.  </p>
 <p><strong>Key Stats:</strong><br />
 - <strong>Primary Domain:</strong> <code>packetflow.be</code> (Subdomain: <code>lab.internal.packetflow.be</code>)<br />
 - <strong>Router/Firewall:</strong> FortiGate 40F<br />
 - <strong>Core Switch:</strong> Ubiquiti EdgeSwitch 8 PoE<br />
 - <strong>Wireless:</strong> MikroTik hAP ac lite<br />
 - <strong>Site CIDR:</strong> <code>10.10.0.0/16</code> (Home)<br />
-- <strong>Remote Branch Office CIDR:</strong> <code>10.20.0.0/16</code> (Not yet implemented)  </p>
+- <strong>Remote Branch Office CIDR:</strong> <code>10.20.0.0/16</code> (Not yet implemented)</p>
+<h2 id="11-visualization-goals">1.1. Visualization &amp; Goals</h2>
+<p><strong>Goals:</strong>
+- Improve general networking skills.
+- Simulate a IPv4-only to IPv6-first migration.
+- Improve affinity with Fortinet and MikroTik CLI.</p>
+<p><strong>Naming Convention:</strong>
+- <strong>FW:</strong> Firewall
+- <strong>ALS:</strong> Access Layer Switch
+- <strong>DLS:</strong> Distribution Layer Switch
+- <strong>AP:</strong> Access Point</p>
+<p><strong>Notes:</strong>
+- Traffic shaping is not yet implemented. (Priority: Finish IPv6 implementation first to compare side-by-side performance).  </p>
 <hr />
 <h2 id="2-basic-principles">2. Basic Principles</h2>
 <p>The design and maintenance of this network adhere to the following core principles:</p>
@@ -719,12 +775,13 @@ It's subject to many changes and should <strong>not</strong> be considered a pro
 </ol>
 <hr />
 <h2 id="3-network-topology">3. Network Topology</h2>
-<h3 id="layer-1-physical-topology">Layer 1: Physical Topology</h3>
+<h3 id="layer-1-physical">Layer 1: Physical</h3>
 <p>The physical connection diagram without any IP addresses.</p>
 <p><strong>[Image Placeholder: Physical Topology Diagram]</strong></p>
-<h3 id="layer-2-data-link-topology">Layer 2: Data Link Topology</h3>
+<h3 id="layer-2-data-link">Layer 2: Data Link</h3>
 <p>The data link layer configuration, including VLANs.</p>
 <p><strong>[Image Placeholder: Data Link Topology Diagram]</strong></p>
+<h3 id="layer-3-network">Layer 3: Network</h3>
 
 
 
