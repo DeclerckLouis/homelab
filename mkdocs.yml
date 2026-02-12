@@ -2,6 +2,26 @@ site_name: HomeLab Documentation
 site_url: https://lab.packetflow.be
 theme: 
   name: material
+  features:
+  - content.code.copy
+  - content.code.select
+  - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
@@ -13,3 +33,4 @@ nav:
       - Security: 01_network/04_security.md
       - SD-WAN: 01_network/05_sd_wan.md
       - Wireless: 01_network/06_wireless.md
+  - Status : status.md
