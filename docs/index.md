@@ -3,8 +3,8 @@
 ## Welcome
 Welcome to the documentation for the **Packetflow Homelab**.  
 This project serves as a practical testing ground for network engineering concepts,  
-specifically focusing on **CCNA certification** topics and **IPv6 implementation**.
-**THIS IS NOT A PROD GUIDELINE, IT CAN BE FULL OF MISTAKES**
+specifically focusing on **CCNA certification** topics and **IPv6 implementation**.  
+It's subject to many changes and should **not** be considered a production environment.  
 
 ## Lab Overview
 
