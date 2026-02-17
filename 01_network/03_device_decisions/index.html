@@ -794,7 +794,7 @@
 <h2 id="3-configuration-standards">3. Configuration Standards</h2>
 <h3 id="31-interface-configuration-fortigate">3.1. Interface Configuration (FortiGate)</h3>
 <p>Interfaces follow a strict template for IPv4 and IPv6 dual-stack connectivity.</p>
-<p><div class="language-bash highlight"><span class="filename">Example: VLAN 10</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>config<span class="w"> </span>system<span class="w"> </span>interface
+<div class="language-bash highlight"><span class="filename">Example: VLAN 10</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>config<span class="w"> </span>system<span class="w"> </span>interface
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>edit<span class="w"> </span><span class="s2">&quot;VLAN10&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>vdom<span class="w"> </span><span class="s2">&quot;root&quot;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>ip<span class="w"> </span><span class="m">10</span>.10.10.1<span class="w"> </span><span class="m">255</span>.255.255.0
@@ -815,7 +815,9 @@
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span>next
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>end
 </span></code></pre></div>
-1.  <strong>Link Local Address:</strong> Manually set to <code>fe80::[VLAN_ID]:1</code> for consistency and ease of future troubleshooting.</p>
+<ol>
+<li><strong>Link Local Address:</strong> Manually set to <code>fe80::[VLAN_ID]:1</code> for consistency and ease of future troubleshooting.</li>
+</ol>
 <h3 id="32-switching-logic-ubiquiti-edgeswitch">3.2. Switching Logic (Ubiquiti EdgeSwitch)</h3>
 <ul>
 <li><strong>VLANs:</strong> Must be defined in the VLAN database.</li>
