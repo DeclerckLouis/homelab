@@ -7,8 +7,11 @@ Traffic is grouped by source interface/VLAN to simplify policy management.
 I'm also using an **implicit deny rule** at the end of the policy list.  
 
 
-## 2. Firewall Zones
-Traffic is grouped by source interface/VLAN to simplify policy management.
+## 2. Firewall Zones (will not be used)
+
+!!! note "will not be used"
+    Due to the VLANs already being used in the hardware switch, i can't add them to zones.
+    I might look into this again, or just redo the whole fortigate setup later for a firewall-focused lab.
 
 - **LAN_Trusted:** VLAN 10 (Default)  
 - **LAN_Guest:** VLAN 20 (Guest)  
@@ -17,10 +20,10 @@ Traffic is grouped by source interface/VLAN to simplify policy management.
 - **WAN_Internet:** WAN (Internet)  
 - **LAN_MGMT:** VLAN 99 (Management), INT03 (Emergency)  
 
-Note:  I only have 2 Linux servers and no printers (yet).  
-I'm currently running 2 linux servers (grafana and netbox, neither are DMZ)
-A future server for the DMZ will be my HAProxy  
-An IOT VLAN will follow as well with printers (VLAN31 IOT) which will get it's own zone.
+!!! note "I only have 2 Linux servers and no printers (yet)."  
+    I'm currently running 2 linux servers (grafana and netbox, neither are DMZ)
+    A future server for the DMZ will be my HAProxy  
+    An IOT VLAN will follow as well with printers (VLAN31 IOT) which will get it's own zone.
 
 ## 3. Firewall Policies
 The following policies are currently active on the FortiGate:

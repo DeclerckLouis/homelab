@@ -15,33 +15,31 @@ It's subject to many changes and should **not** be considered a production envir
 ## Documentation Structure
 The documentation is currently focused on networking, and has been structured into sections within the **Network** module:
 
-### 1. [Hardware](01_network/01_hardware.md)  
+### 1. [Physical Layout](01_network/01_physical.md)  
 Detailed inventory of all physical devices, cabling maps, and the physical topology showing how the ISP Modem, FortiGate, and downstream switches connect.
 
-### 2. [Addressing](01_network/02_addressing.md)  
+### 2. [Logical Layout](01_network/02_logical.md)  
 Defines the **Logical Topology**.
 
 - **VLANs:** Segmentation for Default, Guest, Servers, DMZ, and Management.  
-- **IPv6 Strategy:** Explains the decision to use **Unique Local Addressing (ULA)** (`fdb1:6575:ad8a::/48`)  
-    due to ISP (modem) constraints, ensuring stable internal IPv6 routing and learning opportunities.
+- **IPv6 Strategy:** Explains the decision to use **Unique Local Addressing (ULA)** (`fdb1:6575:ad8a::/48`) due to ISP (modem) constraints.
+- **WAN/SD-WAN:** Configuration of the `virtual-wan-link` interface.
 
-### 3. [Routing & Switching](01_network/03_routing_switching.md)  
-Covers **routing and switching** configuration and decisions inside the network.
+### 3. [Device Decisions](01_network/03_device_decisions.md)  
+Covers **routing, switching, and configuration standards**.
 
 - **Switching:** 802.1Q Trunks, Native VLAN security, and Bridge VLAN Filtering on MikroTik.  
 - **Routing:** Inter-VLAN routing and IPv6 Router Advertisements (RA).
+- **Standards:** Interface configuration templates and naming conventions.
 
 ### 4. [Security](01_network/04_security.md)  
 Documents the **Security policies** used.  
 
 - **Zones:** Trusted vs Untrusted vs Management.  
-- **Policies:** Specific firewall rules allowing traffic (e.g., VLAN 10/20 to Internet) while blocking inter-VLAN access by default.  
+- **Policies:** Specific firewall rules allowing traffic while blocking inter-VLAN access by default.  
 
-### 5. [SD-WAN](01_network/05_sd_wan.md)  
-Configuration of the `virtual-wan-link` interface to abstract WAN connectivity and prepare for future multi-path scenarios.  
-
-### 6. [Wireless](01_network/06_wireless.md)  
-Design decisions for the `Declerck-Cardon` SSID, frequency planning, and security standards.  
+### 5. [Wireless](01_network/06_wireless.md)  
+Design decisions for the `Declerck-Cardon` SSID, frequency planning, and security standards. 
 
 
 ## Future Plans

@@ -1,12 +1,11 @@
 # System Status & Incident Log
 
 **Current Status:**   
-:white_check_mark: **All Systems Operational**
+:white_check_mark: **No outages**
+!!! Note "This is currently manually updated."
 
 ---
-
 ## Incident History
-
 ### 2026
 #### February 10, 2026 - IPv4 Connectivity Loss
 !!! warning "Outage: Partial Internet Loss"
