@@ -3,8 +3,8 @@
 ## Welcome
 Welcome to the documentation for the **Packetflow Homelab**.  
 This project serves as a practical testing ground for network engineering concepts,  
-specifically focusing on **network documentation** topics (See [Documentation](Documentation/index.md)) and **small projects** (See [Blog](blog/index.md)).  
-It's subject to many changes and should **not** be considered production-grade. (Although that's what I aim for with the [Documentation](Documentation/index.md))  
+specifically focusing on **network documentation** topics (See [Documentation](./homelab/01_network/01_physical.md)) and **small projects** (See [Blog](blog/index.md)).  
+It's subject to many changes and should **not** be considered production-grade. (Although that's what I aim for with the [Documentation](./homelab/01_network/01_physical.md))  
 
 ## Lab Overview
 
