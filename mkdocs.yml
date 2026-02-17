@@ -12,8 +12,13 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
-
 plugins:
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: long
+      post_url_date_format: yyyy/MM
+      post_url_format: "{date}/{categories}/{slug}"
   - search
   - tags
 
@@ -33,16 +38,6 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
-nav:
-  - Home: index.md
-  - Network:
-      - Physical Layout: 01_network/01_physical.md
-      - Logical Layout: 01_network/02_logical.md
-      - Device Decisions: 01_network/03_device_decisions.md
-      - Security: 01_network/04_security.md
-      - Wireless: 01_network/06_wireless.md
-  - Status : status.md
-
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -55,3 +50,18 @@ extra:
       link: mailto:louis@packetflow.be
 
 copyright: Copyright &copy; 2026 Louis Declerck
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+  - Documentation:
+    - Network:
+      - Physical Layout: 01_network/01_physical.md
+      - Logical Layout: 01_network/02_logical.md
+      - Device Decisions: 01_network/03_device_decisions.md
+      - Security: 01_network/04_security.md
+      - Wireless: 01_network/06_wireless.md
+    - Systems:
+      - Physical Layout: 02_systems/01_physical.md
+  - Status : status.md
