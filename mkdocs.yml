@@ -57,11 +57,11 @@ nav:
     - blog/index.md
   - Documentation:
     - Network:
-      - Physical Layout: 01_network/01_physical.md
-      - Logical Layout: 01_network/02_logical.md
-      - Device Decisions: 01_network/03_device_decisions.md
-      - Security: 01_network/04_security.md
-      - Wireless: 01_network/06_wireless.md
+      - Physical Layout: homelab/01_network/01_physical.md
+      - Logical Layout: homelab/01_network/02_logical.md
+      - Device Decisions: homelab/01_network/03_device_decisions.md
+      - Security: homelab/01_network/04_security.md
+      - Wireless: homelab/01_network/06_wireless.md
     - Systems:
-      - Physical Layout: 02_systems/01_physical.md
+      - Physical Layout: homelab/02_systems/01_physical.md
   - Status : status.md
