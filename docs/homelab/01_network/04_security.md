@@ -2,10 +2,7 @@
 
 ## 1. Overview
 The **FortiGate 40F** acts as a stateful firewall.  
-The security posture follows **zone-based** approach;  
-Traffic is grouped by source interface/VLAN to simplify policy management.  
 I'm also using an **implicit deny rule** at the end of the policy list.  
-
 
 ## 2. Firewall Zones (will not be used)
 

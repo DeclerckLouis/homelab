@@ -1,16 +1,16 @@
 # Physical Layout
 
-## 1. Site Tiers
-To standardize network deployments, sites are categorized into tiers based on their function and requirements.
+## 1. Sites
+To standardize network deployments, sites are categorized and documented based on their function and requirements.
 
-| Tier | Description | Requirements |
+| Namee | Description | Requirements |
 | :--- | :--- | :--- |
-| **Home Office** | Primary residence and main lab environment. | High availability, 10GbE core, experimental hardware. |
-| **Branch Office** | Remote locations (e.g., family homes connected via VPN). | Low maintenance, stable connectivity, remote management. |
-| **Mobile** | Roaming devices connecting via VPN. | Secure access to internal resources. |
+| **(default) Home Office** | Primary residence and main lab environment. | High availability, 10GbE core, experimental hardware. |
+| **(default) Branch Office** | Remote locations (e.g., family homes connected via VPN). | Low maintenance, stable connectivity, remote management. |
+| **Guest** | Roaming devices connecting via VPN. | Secure access to internal resources. |
 
 ## 2. Hardware Inventory (BOM)
-Current hardware deployed in the **Home Office** tier.
+Current hardware deployed in the **Home Office** site.
 
 | Device Role | Make / Model | Hostname | Description / Notes |
 | :--- | :--- | :--- | :--- |
@@ -45,5 +45,9 @@ The network centers around a "Core Rack" configuration where the FortiGate handl
 
 ### MikroTik hAP ac lite (`AP01`)
 *Radio Configuration:*
-- **wlan1 (2.4GHz):** Legacy/IoT devices
-- **wlan2 (5GHz):** High-speed clients
+- **wlan1 (2.4GHz):** Legacy/IoT devices  
+- **wlan2 (5GHz):** High-speed clients  
+
+!!! note "Note"
+    This device currently serves the home wifi, this is done to generate some "real" traffic on the network.  
+    While not necessarily best practice, it allows me to spot issues faster.
