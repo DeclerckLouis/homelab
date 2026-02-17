@@ -15,9 +15,13 @@ The WiFi logic is separate from the routing core (FortiGate), operating in "Brid
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Declerck-Cardon** | 5 GHz | *Auto* | 40 MHz | **20** (Guest) | Any guest clients |
 
+!!! note "Note"
+    This device currently serves the home wifi, this is done to generate some "real" traffic on the network.  
+    While not necessarily best practice, it allows me to spot issues faster.
+
 ## 4. Security Decisions
 - **Authentication:** WPA2-PSK (AES-CCMP).
-- **Key:** A random password given to guests.
+- **Key:** An easy-to-remember password given to guests.
 - **Isolation:** Client-to-Client forwarding is allowed by default on the AP Bridge, but Inter-VLAN traffic is blocked by the Firewall.
 
 ## 5. Implementation Logic (MikroTik)
