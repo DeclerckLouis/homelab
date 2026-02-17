@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://lab.packetflow.be/01_network/05_sd_wan/">
+        <link rel="canonical" href="https://lab.packetflow.be/01_network/01_physical/">
       
       
-        <link rel="prev" href="../04_security/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../06_wireless/">
+        <link rel="next" href="../02_logical/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>SD-WAN - HomeLab Documentation</title>
+        <title>Physical Layout - HomeLab Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sd-wan-configuration" class="md-skip">
+        <a href="#physical-layout" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SD-WAN
+              Physical Layout
             
           </span>
         </div>
@@ -271,17 +271,175 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physical Layout
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Overview
+    Physical Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-site-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Site Tiers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hardware-inventory-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hardware Inventory (BOM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-physical-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Physical Topology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cabling-port-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cabling &amp; Port Map
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cabling &amp; Port Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-40f-fw01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FortiGate 40F (FW01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubiquiti-edgeswitch-8-poe-als01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubiquiti EdgeSwitch 8 PoE (ALS01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mikrotik-hap-ac-lite-ap01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MikroTik hAP ac lite (AP01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical Layout
   
 
     
@@ -302,70 +460,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_hardware/" class="md-nav__link">
+      <a href="../03_device_decisions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_addressing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Addressing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_routing_switching/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Routing & Switching
+    Device Decisions
   
 
     
@@ -402,125 +504,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SD-WAN
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SD-WAN
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-sd-wan-members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. SD-WAN Members
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-sd-wan-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. SD-WAN Rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-sla-targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. SLA Targets
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -615,10 +598,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-overview" class="md-nav__link">
+  <a href="#1-site-tiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Overview
+        1. Site Tiers
       
     </span>
   </a>
@@ -626,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-sd-wan-members" class="md-nav__link">
+  <a href="#2-hardware-inventory-bom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. SD-WAN Members
+        2. Hardware Inventory (BOM)
       
     </span>
   </a>
@@ -637,10 +620,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sd-wan-rules" class="md-nav__link">
+  <a href="#3-physical-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. SD-WAN Rules
+        3. Physical Topology
       
     </span>
   </a>
@@ -648,13 +631,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-sla-targets" class="md-nav__link">
+  <a href="#4-cabling-port-map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. SLA Targets
+        4. Cabling &amp; Port Map
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4. Cabling &amp; Port Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-40f-fw01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FortiGate 40F (FW01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubiquiti-edgeswitch-8-poe-als01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubiquiti EdgeSwitch 8 PoE (ALS01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mikrotik-hap-ac-lite-ap01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MikroTik hAP ac lite (AP01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -675,35 +697,145 @@
 
 
 
-<h1 id="sd-wan-configuration">SD-WAN Configuration</h1>
-<h2 id="1-overview">1. Overview</h2>
-<p>Software-Defined WAN (SD-WAN) is used to abstract the underlying WAN connectivity.<br />
-Even with a single uplink, using the SD-WAN interface (<code>virtual-wan-link</code>) allows for easier policy management and future expansion (e.g., adding LTE failover).  </p>
-<h2 id="2-sd-wan-members">2. SD-WAN Members</h2>
+<h1 id="physical-layout">Physical Layout</h1>
+<h2 id="1-site-tiers">1. Site Tiers</h2>
+<p>To standardize network deployments, sites are categorized into tiers based on their function and requirements.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Interface</th>
-<th style="text-align: left;">Alias</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Tier</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Requirements</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>wan</strong></td>
-<td style="text-align: left;">ISP Uplink</td>
-<td style="text-align: left;">Active</td>
-<td style="text-align: left;">Primary Gateway</td>
+<td style="text-align: left;"><strong>Home Office</strong></td>
+<td style="text-align: left;">Primary residence and main lab environment.</td>
+<td style="text-align: left;">High availability, 10GbE core, experimental hardware.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Branch Office</strong></td>
+<td style="text-align: left;">Remote locations (e.g., family homes connected via VPN).</td>
+<td style="text-align: left;">Low maintenance, stable connectivity, remote management.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mobile</strong></td>
+<td style="text-align: left;">Roaming devices connecting via VPN.</td>
+<td style="text-align: left;">Secure access to internal resources.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="3-sd-wan-rules">3. SD-WAN Rules</h2>
-<p>Currently, the default implicit rule is in effect:<br />
-- <strong>Algorithm:</strong> Source IP based load balancing (effectively single path with one member).<br />
-- <strong>Destination:</strong> <code>0.0.0.0/0</code> redirects to <code>virtual-wan-link</code>.  </p>
-<h2 id="4-sla-targets">4. SLA Targets</h2>
-<p><em>No specific SLA targets (Jitter/Packet Loss) configured at this time.</em></p>
+<h2 id="2-hardware-inventory-bom">2. Hardware Inventory (BOM)</h2>
+<p>Current hardware deployed in the <strong>Home Office</strong> tier.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device Role</th>
+<th style="text-align: left;">Make / Model</th>
+<th style="text-align: left;">Hostname</th>
+<th style="text-align: left;">Description / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Router / Firewall</strong></td>
+<td style="text-align: left;">Fortinet FortiGate 40F</td>
+<td style="text-align: left;"><code>FW01</code></td>
+<td style="text-align: left;">Main internet gateway and security appliance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Core Switch</strong></td>
+<td style="text-align: left;">Ubiquiti EdgeSwitch 8 PoE</td>
+<td style="text-align: left;"><code>ALS01</code></td>
+<td style="text-align: left;">Managed L2 switch providing PoE to APs and connectivity to servers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Access Point</strong></td>
+<td style="text-align: left;">MikroTik hAP ac lite</td>
+<td style="text-align: left;"><code>AP01</code></td>
+<td style="text-align: left;">Dual-concurrent Access Point. <strong>Used for learning MikroTik RouterOS.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compute</strong></td>
+<td style="text-align: left;">Generic Servers</td>
+<td style="text-align: left;"><em>Various</em></td>
+<td style="text-align: left;">Hypervisors and storage servers.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: All hosts are part of the <code>lab.internal.packetflow.be</code> domain.</em></p>
+<h2 id="3-physical-topology">3. Physical Topology</h2>
+<p>The network centers around a "Core Rack" configuration where the FortiGate handles WAN and the EdgeSwitch handles internal distribution.</p>
+<p><strong>[Image Placeholder: Physical Topology Diagram]</strong>
+<em>(Include rack diagram here)</em></p>
+<h2 id="4-cabling-port-map">4. Cabling &amp; Port Map</h2>
+<h3 id="fortigate-40f-fw01">FortiGate 40F (<code>FW01</code>)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Port</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Connected Device</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WAN</td>
+<td style="text-align: left;">RJ45</td>
+<td style="text-align: left;">ISP Modem</td>
+<td style="text-align: left;">Public IP via DHCP/PPPoE</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">RJ45</td>
+<td style="text-align: left;">AP01</td>
+<td style="text-align: left;">HAP AC Lite currently used as AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">RJ45</td>
+<td style="text-align: left;">ALS01</td>
+<td style="text-align: left;">Main Trunk Link (Carries all VLANs)</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">RJ45</td>
+<td style="text-align: left;"><em>Reserved</em></td>
+<td style="text-align: left;">Emergency Management / Direct Access</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ubiquiti-edgeswitch-8-poe-als01">Ubiquiti EdgeSwitch 8 PoE (<code>ALS01</code>)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Port</th>
+<th style="text-align: left;">Profile</th>
+<th style="text-align: left;">Connected Device</th>
+<th style="text-align: left;">PoE Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Trunk</td>
+<td style="text-align: left;"><strong>uplink to FW01</strong></td>
+<td style="text-align: left;">POE+ (0W)</td>
+</tr>
+<tr>
+<td style="text-align: left;">2-8</td>
+<td style="text-align: left;">Access/Trunk</td>
+<td style="text-align: left;">Servers / IoT</td>
+<td style="text-align: left;"><em>As needed</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mikrotik-hap-ac-lite-ap01">MikroTik hAP ac lite (<code>AP01</code>)</h3>
+<p><em>Radio Configuration:</em>
+- <strong>wlan1 (2.4GHz):</strong> Legacy/IoT devices
+- <strong>wlan2 (5GHz):</strong> High-speed clients</p>
 
 
 

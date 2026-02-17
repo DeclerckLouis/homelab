@@ -2,38 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lab.packetflow.be/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
          <loc>https://lab.packetflow.be/status/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/01_hardware/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <loc>https://lab.packetflow.be/01_network/01_physical/</loc>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/02_addressing/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <loc>https://lab.packetflow.be/01_network/02_logical/</loc>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/03_routing_switching/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <loc>https://lab.packetflow.be/01_network/03_device_decisions/</loc>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
          <loc>https://lab.packetflow.be/01_network/04_security/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://lab.packetflow.be/01_network/05_sd_wan/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-02-17</lastmod>
     </url>
     <url>
          <loc>https://lab.packetflow.be/01_network/06_wireless/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://lab.packetflow.be/01_network/overview/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-02-17</lastmod>
     </url>
 </urlset>

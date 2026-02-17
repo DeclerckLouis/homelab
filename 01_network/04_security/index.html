@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://lab.packetflow.be/01_network/04_security/">
       
       
-        <link rel="prev" href="../03_routing_switching/">
+        <link rel="prev" href="../03_device_decisions/">
       
       
-        <link rel="next" href="../05_sd_wan/">
+        <link rel="next" href="../06_wireless/">
       
       
         
@@ -274,14 +274,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../01_physical/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Overview
+    Physical Layout
   
 
     
@@ -302,14 +302,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_hardware/" class="md-nav__link">
+      <a href="../02_logical/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hardware
+    Logical Layout
   
 
     
@@ -330,42 +330,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_addressing/" class="md-nav__link">
+      <a href="../03_device_decisions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Addressing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_routing_switching/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Routing & Switching
+    Device Decisions
   
 
     
@@ -457,10 +429,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-firewall-zones" class="md-nav__link">
+  <a href="#2-firewall-zones-will-not-be-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Firewall Zones
+        2. Firewall Zones (will not be used)
       
     </span>
   </a>
@@ -493,34 +465,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_sd_wan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SD-WAN
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -626,10 +570,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-firewall-zones" class="md-nav__link">
+  <a href="#2-firewall-zones-will-not-be-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Firewall Zones
+        2. Firewall Zones (will not be used)
       
     </span>
   </a>
@@ -681,8 +625,12 @@
 The security posture follows <strong>zone-based</strong> approach;<br />
 Traffic is grouped by source interface/VLAN to simplify policy management.<br />
 I'm also using an <strong>implicit deny rule</strong> at the end of the policy list.  </p>
-<h2 id="2-firewall-zones">2. Firewall Zones</h2>
-<p>Traffic is grouped by source interface/VLAN to simplify policy management.</p>
+<h2 id="2-firewall-zones-will-not-be-used">2. Firewall Zones (will not be used)</h2>
+<div class="admonition note">
+<p class="admonition-title">will not be used</p>
+<p>Due to the VLANs already being used in the hardware switch, i can't add them to zones.
+I might look into this again, or just redo the whole fortigate setup later for a firewall-focused lab.</p>
+</div>
 <ul>
 <li><strong>LAN_Trusted:</strong> VLAN 10 (Default)  </li>
 <li><strong>LAN_Guest:</strong> VLAN 20 (Guest)  </li>
@@ -691,10 +639,12 @@ I'm also using an <strong>implicit deny rule</strong> at the end of the policy l
 <li><strong>WAN_Internet:</strong> WAN (Internet)  </li>
 <li><strong>LAN_MGMT:</strong> VLAN 99 (Management), INT03 (Emergency)  </li>
 </ul>
-<p>Note:  I only have 2 Linux servers and no printers (yet).<br />
-I'm currently running 2 linux servers (grafana and netbox, neither are DMZ)
+<div class="admonition note">
+<p class="admonition-title">I only have 2 Linux servers and no printers (yet).</p>
+<p>I'm currently running 2 linux servers (grafana and netbox, neither are DMZ)
 A future server for the DMZ will be my HAProxy<br />
 An IOT VLAN will follow as well with printers (VLAN31 IOT) which will get it's own zone.</p>
+</div>
 <h2 id="3-firewall-policies">3. Firewall Policies</h2>
 <p>The following policies are currently active on the FortiGate:</p>
 <table>

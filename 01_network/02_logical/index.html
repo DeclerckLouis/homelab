@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://lab.packetflow.be/01_network/overview/">
+        <link rel="canonical" href="https://lab.packetflow.be/01_network/02_logical/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../01_physical/">
       
       
-        <link rel="next" href="../01_hardware/">
+        <link rel="next" href="../03_device_decisions/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Overview - HomeLab Documentation</title>
+        <title>Logical Layout - HomeLab Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#network-infrastructure" class="md-skip">
+        <a href="#logical-layout" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Logical Layout
             
           </span>
         </div>
@@ -271,6 +271,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_physical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physical Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -290,7 +318,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Logical Layout
   
 
     
@@ -308,7 +336,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Logical Layout
   
 
     
@@ -334,10 +362,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-overview" class="md-nav__link">
+  <a href="#1-business-drivers-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Overview
+        1. Business Drivers &amp; Goals
       
     </span>
   </a>
@@ -345,10 +373,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-visualization-goals" class="md-nav__link">
+  <a href="#2-global-network-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Visualization &amp; Goals
+        2. Global Network Design
       
     </span>
   </a>
@@ -356,10 +384,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-basic-principles" class="md-nav__link">
+  <a href="#3-naming-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Basic Principles
+        3. Naming Conventions
       
     </span>
   </a>
@@ -367,22 +395,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-network-topology" class="md-nav__link">
+  <a href="#4-logical-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Network Topology
+        4. Logical Topology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Network Topology">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ip-addressing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IP Addressing Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. IP Addressing Scheme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#layer-1-physical" class="md-nav__link">
+  <a href="#51-supernets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 1: Physical
+        5.1. Supernets
       
     </span>
   </a>
@@ -390,10 +429,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-2-data-link" class="md-nav__link">
+  <a href="#52-vlans-subnets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2: Data Link
+        5.2. VLANs &amp; Subnets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-routing-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Routing &amp; WAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Routing &amp; WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-routing-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Routing Protocols
       
     </span>
   </a>
@@ -401,10 +468,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-3-network" class="md-nav__link">
+  <a href="#62-sd-wan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 3: Network
+        6.2. SD-WAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Inter-VLAN Routing
       
     </span>
   </a>
@@ -432,70 +510,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_hardware/" class="md-nav__link">
+      <a href="../03_device_decisions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_addressing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Addressing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_routing_switching/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Routing & Switching
+    Device Decisions
   
 
     
@@ -524,34 +546,6 @@
     
   
     Security
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_sd_wan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SD-WAN
   
 
     
@@ -654,10 +648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-overview" class="md-nav__link">
+  <a href="#1-business-drivers-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Overview
+        1. Business Drivers &amp; Goals
       
     </span>
   </a>
@@ -665,10 +659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-visualization-goals" class="md-nav__link">
+  <a href="#2-global-network-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Visualization &amp; Goals
+        2. Global Network Design
       
     </span>
   </a>
@@ -676,10 +670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-basic-principles" class="md-nav__link">
+  <a href="#3-naming-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Basic Principles
+        3. Naming Conventions
       
     </span>
   </a>
@@ -687,22 +681,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-network-topology" class="md-nav__link">
+  <a href="#4-logical-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Network Topology
+        4. Logical Topology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Network Topology">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ip-addressing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IP Addressing Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. IP Addressing Scheme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#layer-1-physical" class="md-nav__link">
+  <a href="#51-supernets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 1: Physical
+        5.1. Supernets
       
     </span>
   </a>
@@ -710,10 +715,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-2-data-link" class="md-nav__link">
+  <a href="#52-vlans-subnets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 2: Data Link
+        5.2. VLANs &amp; Subnets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-routing-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Routing &amp; WAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Routing &amp; WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-routing-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Routing Protocols
       
     </span>
   </a>
@@ -721,10 +754,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layer-3-network" class="md-nav__link">
+  <a href="#62-sd-wan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Layer 3: Network
+        6.2. SD-WAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Inter-VLAN Routing
       
     </span>
   </a>
@@ -753,62 +797,156 @@
 
 
 
-<h1 id="network-infrastructure">Network Infrastructure</h1>
-<h2 id="1-overview">1. Overview</h2>
-<p>This document details the network topology, addressing schemes, and security policies for the <strong>Packetflow Homelab</strong>.<br />
-The network provides an (un)stable experimental environment while also serving my Home WiFi.<br />
-It's subject to many changes and should <strong>not</strong> be considered a production environment.  </p>
-<p><strong>Key Stats:</strong><br />
-- <strong>Primary Domain:</strong> <code>packetflow.be</code> (Subdomain: <code>lab.internal.packetflow.be</code>)<br />
-- <strong>Router/Firewall:</strong> FortiGate 40F<br />
-- <strong>Core Switch:</strong> Ubiquiti EdgeSwitch 8 PoE<br />
-- <strong>Wireless:</strong> MikroTik hAP ac lite<br />
-- <strong>Site CIDR:</strong> <code>10.10.0.0/16</code> (Home)<br />
-- <strong>Remote Branch Office CIDR:</strong> <code>10.20.0.0/16</code> (Not yet implemented)</p>
-<h2 id="11-visualization-goals">1.1. Visualization &amp; Goals</h2>
-<p><strong>Goals:</strong>
-- Improve general networking skills.
-- Simulate a IPv4-only to IPv6-first migration.
-- Improve affinity with Fortinet and MikroTik CLI.</p>
-<p><strong>Naming Convention:</strong>
-- <strong>FW:</strong> Firewall
-- <strong>ALS:</strong> Access Layer Switch
-- <strong>DLS:</strong> Distribution Layer Switch
-- <strong>AP:</strong> Access Point</p>
-<p><strong>Notes:</strong>
-- Traffic shaping is not yet implemented. (Priority: Finish IPv6 implementation first to compare side-by-side performance).  </p>
-<hr />
-<h2 id="2-basic-principles">2. Basic Principles</h2>
-<p>The design and maintenance of this network adhere to the following core principles:</p>
-<ol>
-<li><strong>Strict Segmentation:</strong>  <ul>
-<li>The "Home office" network (<code>10.10.0.0/16</code>) is distinct from the reserved "Remote branch office" range (<code>10.20.0.0/16</code>).   </li>
-<li>All VLANs are separated from each other.  </li>
+<h1 id="logical-layout">Logical Layout</h1>
+<h2 id="1-business-drivers-goals">1. Business Drivers &amp; Goals</h2>
+<p>The <strong>Packetflow Homelab</strong> network typically serves two primary functions:
+1.  <strong>Production Home Network:</strong> Providing stable, high-speed internet access for daily use (Working from Home, Streaming, Gaming).
+2.  <strong>Experimental Lab:</strong> A playground for learning networking concepts (IPv6, BGP, SD-WAN, Segmentation) without disrupting our ability to watch netflix.</p>
+<p><strong>Key Goals:</strong>
+- <strong>Strict Segmentation:</strong> Isolating "Home" traffic from "Guest" and "Server" traffic.
+- <strong>IPv6 First:</strong> Implementing a dual-stack network with a focus on IPv6.
+- <strong>Vendor Diversity:</strong> Gaining proficiency with Fortinet, Ubiquiti, and MikroTik ecosystems.</p>
+<h2 id="2-global-network-design">2. Global Network Design</h2>
+<p>The network architecture is designed to support a multi-site topology, although currently only the primary site is active.</p>
+<ul>
+<li><strong>Home Office (HQ):</strong> The primary site hosting the core infrastructure (<code>10.10.0.0/16</code>).</li>
+<li><strong>Branch Office (Remote):</strong> A planned remote site for simulating site-to-site VPNs (<code>10.20.0.0/16</code>).</li>
+<li><strong>Cloud/VPS:</strong> External resources connected via VPN (e.g., VPS for off-site backups/monitoring).</li>
+</ul>
+<h2 id="3-naming-conventions">3. Naming Conventions</h2>
+<p>A consistent naming convention is used to identify devices and interfaces easily.</p>
+<p><strong>Format:</strong> <code>[ROLE][INDEX].[DOMAIN]</code></p>
+<ul>
+<li><strong>Roles:</strong><ul>
+<li><code>FW</code>: Firewall / Router (e.g., <code>FW01</code>)</li>
+<li><code>ALS</code>: Access Layer Switch (e.g., <code>ALS01</code>)</li>
+<li><code>DLS</code>: Distribution Layer Switch (e.g., <code>DLS01</code>)</li>
+<li><code>AP</code>: Access Point (e.g., <code>AP01</code>)</li>
+<li><code>SRV</code>: Server (e.g., <code>SRV01</code>)</li>
 </ul>
 </li>
-<li><strong>Default Deny security policy:</strong>  <ul>
-<li>The firewall operates on a "deny-by-default" basis.  </li>
-<li>Traffic is only permitted if explicitly defined in the policy table; the default action is <code>DROP</code>.  </li>
+<li><strong>Domain:</strong> <code>lab.internal.packetflow.be</code></li>
+</ul>
+<p><strong>Interface Naming:</strong>
+- <strong>VLANs:</strong> <code>VLAN[ID]</code> (e.g., <code>VLAN10</code>)
+- <strong>L3 Interfaces:</strong> Interactive names (e.g., <code>wan</code>, <code>lan</code>, <code>dmz</code>)</p>
+<h2 id="4-logical-topology">4. Logical Topology</h2>
+<p><em>(Layer 2 and Layer 3 diagrams showing VLANs, Trunks, and Routing paths)</em></p>
+<p><strong>[Image Placeholder: Logical Topology Diagram]</strong></p>
+<h2 id="5-ip-addressing-scheme">5. IP Addressing Scheme</h2>
+<h3 id="51-supernets">5.1. Supernets</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Supernet</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>10.0.0.0/8</code></td>
+<td style="text-align: left;"><strong>PacketFlow</strong></td>
+<td style="text-align: left;">Global Supernet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>10.10.0.0/16</code></td>
+<td style="text-align: left;"><strong>Home Office</strong></td>
+<td style="text-align: left;">Primary Site (Lab &amp; Residence)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>10.20.0.0/16</code></td>
+<td style="text-align: left;"><strong>Branch Office</strong></td>
+<td style="text-align: left;">Remote Site</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-vlans-subnets">5.2. VLANs &amp; Subnets</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">VLAN ID</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">IPv4 Subnet</th>
+<th style="text-align: left;">IPv6 Subnet (ULA)</th>
+<th style="text-align: left;">Gateway</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>10</strong></td>
+<td style="text-align: left;"><code>Home</code></td>
+<td style="text-align: left;"><code>10.10.10.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:10::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Default Trusted Network.</strong> "Office" devices.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>20</strong></td>
+<td style="text-align: left;"><code>Guest</code></td>
+<td style="text-align: left;"><code>10.10.20.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:20::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Guest Network.</strong> Isolated Internet access only.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>30</strong></td>
+<td style="text-align: left;"><code>Servers</code></td>
+<td style="text-align: left;"><code>10.10.30.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:30::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Servers.</strong> Docker, VMs, Pis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>35</strong></td>
+<td style="text-align: left;"><code>DMZ</code></td>
+<td style="text-align: left;"><code>10.10.35.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:35::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>DMZ.</strong> Public facing services (e.g., HAProxy).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>99</strong></td>
+<td style="text-align: left;"><code>MGMT</code></td>
+<td style="text-align: left;"><code>10.10.99.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:99::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Management.</strong> Network device management.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>666</strong></td>
+<td style="text-align: left;"><code>Blackhole</code></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>Dead VLAN.</strong> Used for Native VLAN security.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: IPv6 Local Link addresses for Gateways are manually set to <code>fe80::[VLAN_ID]:1</code> for consistency.</em></p>
+<h2 id="6-routing-wan">6. Routing &amp; WAN</h2>
+<h3 id="61-routing-protocols">6.1. Routing Protocols</h3>
+<ul>
+<li><strong>IGP:</strong> Currently using <strong>Connected</strong> and <strong>Static</strong> routing. OSPF/BGP planned for future Branch Office integration.</li>
+<li><strong>Default Route:</strong> <code>0.0.0.0/0</code> pointed to ISP Gateway via PPPoE/DHCP.</li>
+</ul>
+<h3 id="62-sd-wan">6.2. SD-WAN</h3>
+<ul>
+<li><strong>Interface:</strong> <code>virtual-wan-link</code></li>
+<li><strong>Members:</strong> <code>wan1</code> (ISP Uplink)</li>
+<li><strong>Strategy:</strong> Even with a single uplink, SD-WAN is used to abstract policies.</li>
+<li><strong>Rules:</strong><ul>
+<li>Source IP load balancing (default).</li>
+<li><code>0.0.0.0/0</code> -&gt; <code>virtual-wan-link</code>.</li>
 </ul>
 </li>
-<li><strong>Management isolation:</strong>  <ul>
-<li>Management interfaces (Switching, Routing, IPMI) are restricted to <strong>VLAN 99</strong>.  </li>
 </ul>
-</li>
-<li><strong>Physical security:</strong>  <ul>
-<li>Unused switch ports and the native VLAN on trunks are assigned to <strong>VLAN 666 (Blackhole)</strong> to prevent unauthorized physical access.  </li>
+<h3 id="63-inter-vlan-routing">6.3. Inter-VLAN Routing</h3>
+<ul>
+<li>Performed by <strong>FortiGate 40F</strong>.</li>
+<li><strong>Policy:</strong> Default Deny. Traffic must be explicitly allowed via Firewall Policies.</li>
 </ul>
-</li>
-</ol>
-<hr />
-<h2 id="3-network-topology">3. Network Topology</h2>
-<h3 id="layer-1-physical">Layer 1: Physical</h3>
-<p>The physical connection diagram without any IP addresses.</p>
-<p><strong>[Image Placeholder: Physical Topology Diagram]</strong></p>
-<h3 id="layer-2-data-link">Layer 2: Data Link</h3>
-<p>The data link layer configuration, including VLANs.</p>
-<p><strong>[Image Placeholder: Data Link Topology Diagram]</strong></p>
-<h3 id="layer-3-network">Layer 3: Network</h3>
 
 
 
