@@ -2,10 +2,20 @@ site_name: HomeLab Documentation
 site_url: https://lab.packetflow.be
 theme: 
   name: material
+  language: en
   features:
-  - content.code.copy
-  - content.code.select
-  - content.code.annotate
+    # - toc.integrate # integrate toc into main navigation (left side)
+    - navigation.path # Breadcrumbs
+    - navigation.tabs # Show tabs on top of page
+    - navigation.tabs.sticky # Tabs stay visible when scrolling
+    - navigation.top # Show back-to-top button
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+plugins:
+  - search
+  - tags
 
 markdown_extensions:
   - admonition
@@ -32,3 +42,16 @@ nav:
       - Security: 01_network/04_security.md
       - Wireless: 01_network/06_wireless.md
   - Status : status.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/declercklouis
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/declercklouis
+    - icon: fontawesome/solid/globe
+      link: https://packetflow.be
+    - icon: fontawesome/solid/envelope
+      link: mailto:louis@packetflow.be
+
+copyright: Copyright &copy; 2026 Louis Declerck
