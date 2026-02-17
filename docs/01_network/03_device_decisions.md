@@ -32,7 +32,7 @@ config system interface
             set ip6-address fdb1:6575:ad8a:10::1/64
             set ip6-allowaccess ping
             config ip6-extra-addr
-                edit fe80::10:1/64 # (1)!
+                edit fe80::10:1/64 #(1)!
                 next
             end
             set ip6-send-adv enable
