@@ -20,7 +20,7 @@ To ensure stability and feature compatibility, the following software versions a
 ### 3.1. Interface Configuration (FortiGate)
 Interfaces follow a strict template for IPv4 and IPv6 dual-stack connectivity.
 
-```bash title=Example: VLAN 10
+```bash title="Example: VLAN 10"
 config system interface
     edit "VLAN10"
         set vdom "root"
@@ -32,7 +32,7 @@ config system interface
             set ip6-address fdb1:6575:ad8a:10::1/64
             set ip6-allowaccess ping
             config ip6-extra-addr
-                edit fe80::10:1/64 # (1)
+                edit fe80::10:1/64 # (1)!
                 next
             end
             set ip6-send-adv enable
@@ -42,6 +42,7 @@ config system interface
     next
 end
 ```
+
 1.  **Link Local Address:** Manually set to `fe80::[VLAN_ID]:1` for consistency and ease of future troubleshooting.
 
 ### 3.2. Switching Logic (Ubiquiti EdgeSwitch)
