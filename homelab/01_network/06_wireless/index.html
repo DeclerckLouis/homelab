@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://lab.packetflow.be/01_network/01_physical/">
+        <link rel="canonical" href="https://lab.packetflow.be/homelab/01_network/06_wireless/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../04_security/">
       
       
-        <link rel="next" href="../02_logical/">
+        <link rel="next" href="../../02_systems/01_physical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Physical Layout - HomeLab Documentation</title>
+        <title>Wireless - HomeLab Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#physical-layout" class="md-skip">
+        <a href="#wireless-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Physical Layout
+              Wireless
             
           </span>
         </div>
@@ -169,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -186,17 +186,15 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
-  Network
+  Blog
 
         </a>
       </li>
@@ -208,9 +206,43 @@
   
   
   
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_physical/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
   
     <li class="md-tabs__item">
-      <a href="../../status/" class="md-tabs__link">
+      <a href="../../../status/" class="md-tabs__link">
         
   
   
@@ -251,7 +283,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -269,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -285,6 +317,269 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/administrative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    administrative
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -312,17 +607,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Network
+    Documentation
   
 
     
@@ -333,12 +628,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Network
+    Documentation
   
 
           </label>
@@ -352,22 +647,29 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
           
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Physical Layout
+    Network
   
 
     
@@ -375,10 +677,28 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_physical/" class="md-nav__link">
         
   
   
@@ -394,109 +714,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-site-tiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Site Tiers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-hardware-inventory-bom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Hardware Inventory (BOM)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-physical-topology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Physical Topology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-cabling-port-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Cabling &amp; Port Map
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Cabling &amp; Port Map">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fortigate-40f-fw01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FortiGate 40F (FW01)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubiquiti-edgeswitch-8-poe-als01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ubiquiti EdgeSwitch 8 PoE (ALS01)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mikrotik-hap-ac-lite-ap01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MikroTik hAP ac lite (AP01)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -590,10 +807,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../06_wireless/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireless
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -601,6 +845,167 @@
     
   
     Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-access-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Access Points
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ssids-frequency-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SSIDs &amp; Frequency Planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-security-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Security Decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-implementation-logic-mikrotik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Implementation Logic (MikroTik)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_systems/01_physical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physical Layout
   
 
     
@@ -620,6 +1025,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -628,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../status/" class="md-nav__link">
+      <a href="../../../status/" class="md-nav__link">
         
   
   
@@ -675,10 +1088,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-site-tiers" class="md-nav__link">
+  <a href="#1-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Site Tiers
+        1. Overview
       
     </span>
   </a>
@@ -686,10 +1099,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-hardware-inventory-bom" class="md-nav__link">
+  <a href="#2-access-points" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Hardware Inventory (BOM)
+        2. Access Points
       
     </span>
   </a>
@@ -697,10 +1110,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-physical-topology" class="md-nav__link">
+  <a href="#3-ssids-frequency-planning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Physical Topology
+        3. SSIDs &amp; Frequency Planning
       
     </span>
   </a>
@@ -708,52 +1121,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-cabling-port-map" class="md-nav__link">
+  <a href="#4-security-decisions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Cabling &amp; Port Map
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Cabling &amp; Port Map">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fortigate-40f-fw01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FortiGate 40F (FW01)
+        4. Security Decisions
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ubiquiti-edgeswitch-8-poe-als01" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#5-implementation-logic-mikrotik" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ubiquiti EdgeSwitch 8 PoE (ALS01)
+        5. Implementation Logic (MikroTik)
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mikrotik-hap-ac-lite-ap01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MikroTik hAP ac lite (AP01)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -782,7 +1167,7 @@
   
   
     <li class="md-path__item">
-      <a href="../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -799,8 +1184,34 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="../01_physical/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01_physical/" class="md-path__link">
           
   <span class="md-ellipsis">
     Network
@@ -822,145 +1233,67 @@
 
 
 
-<h1 id="physical-layout">Physical Layout</h1>
-<h2 id="1-site-tiers">1. Site Tiers</h2>
-<p>To standardize network deployments, sites are categorized into tiers based on their function and requirements.</p>
+<h1 id="wireless-configuration">Wireless Configuration</h1>
+<h2 id="1-overview">1. Overview</h2>
+<p>Wireless connectivity is provided by a <strong>MikroTik HAP ac Lite</strong> that I had laying around.<br />
+The WiFi logic is separate from the routing core (FortiGate), operating in "Bridge AP" mode.  </p>
+<h2 id="2-access-points">2. Access Points</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Tier</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Device</th>
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Location</th>
+<th style="text-align: left;">Management IP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Home Office</strong></td>
-<td style="text-align: left;">Primary residence and main lab environment.</td>
-<td style="text-align: left;">High availability, 10GbE core, experimental hardware.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Branch Office</strong></td>
-<td style="text-align: left;">Remote locations (e.g., family homes connected via VPN).</td>
-<td style="text-align: left;">Low maintenance, stable connectivity, remote management.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Mobile</strong></td>
-<td style="text-align: left;">Roaming devices connecting via VPN.</td>
-<td style="text-align: left;">Secure access to internal resources.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="2-hardware-inventory-bom">2. Hardware Inventory (BOM)</h2>
-<p>Current hardware deployed in the <strong>Home Office</strong> tier.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Device Role</th>
-<th style="text-align: left;">Make / Model</th>
-<th style="text-align: left;">Hostname</th>
-<th style="text-align: left;">Description / Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Router / Firewall</strong></td>
-<td style="text-align: left;">Fortinet FortiGate 40F</td>
-<td style="text-align: left;"><code>FW01</code></td>
-<td style="text-align: left;">Main internet gateway and security appliance.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Core Switch</strong></td>
-<td style="text-align: left;">Ubiquiti EdgeSwitch 8 PoE</td>
-<td style="text-align: left;"><code>ALS01</code></td>
-<td style="text-align: left;">Managed L2 switch providing PoE to APs and connectivity to servers.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Access Point</strong></td>
+<td style="text-align: left;"><strong>AP01</strong></td>
 <td style="text-align: left;">MikroTik hAP ac lite</td>
-<td style="text-align: left;"><code>AP01</code></td>
-<td style="text-align: left;">Dual-concurrent Access Point. <strong>Used for learning MikroTik RouterOS.</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Compute</strong></td>
-<td style="text-align: left;">Generic Servers</td>
-<td style="text-align: left;"><em>Various</em></td>
-<td style="text-align: left;">Hypervisors and storage servers.</td>
+<td style="text-align: left;">Central</td>
+<td style="text-align: left;"><code>10.10.99.x</code> (DHCP)</td>
 </tr>
 </tbody>
 </table>
-<p><em>Note: All hosts are part of the <code>lab.internal.packetflow.be</code> domain.</em></p>
-<h2 id="3-physical-topology">3. Physical Topology</h2>
-<p>The network centers around a "Core Rack" configuration where the FortiGate handles WAN and the EdgeSwitch handles internal distribution.</p>
-<p><strong>[Image Placeholder: Physical Topology Diagram]</strong>
-<em>(Include rack diagram here)</em></p>
-<h2 id="4-cabling-port-map">4. Cabling &amp; Port Map</h2>
-<h3 id="fortigate-40f-fw01">FortiGate 40F (<code>FW01</code>)</h3>
+<h2 id="3-ssids-frequency-planning">3. SSIDs &amp; Frequency Planning</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Port</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Connected Device</th>
-<th style="text-align: left;">Notes</th>
+<th style="text-align: left;">SSID</th>
+<th style="text-align: left;">Band</th>
+<th style="text-align: left;">Frequency</th>
+<th style="text-align: left;">Channel Width</th>
+<th style="text-align: left;">Target VLAN</th>
+<th style="text-align: left;">Usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">WAN</td>
-<td style="text-align: left;">RJ45</td>
-<td style="text-align: left;">ISP Modem</td>
-<td style="text-align: left;">Public IP via DHCP/PPPoE</td>
-</tr>
-<tr>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">RJ45</td>
-<td style="text-align: left;">AP01</td>
-<td style="text-align: left;">HAP AC Lite currently used as AP</td>
-</tr>
-<tr>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">RJ45</td>
-<td style="text-align: left;">ALS01</td>
-<td style="text-align: left;">Main Trunk Link (Carries all VLANs)</td>
-</tr>
-<tr>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">RJ45</td>
-<td style="text-align: left;"><em>Reserved</em></td>
-<td style="text-align: left;">Emergency Management / Direct Access</td>
+<td style="text-align: left;"><strong>Declerck-Cardon</strong></td>
+<td style="text-align: left;">5 GHz</td>
+<td style="text-align: left;"><em>Auto</em></td>
+<td style="text-align: left;">40 MHz</td>
+<td style="text-align: left;"><strong>20</strong> (Guest)</td>
+<td style="text-align: left;">Any guest clients</td>
 </tr>
 </tbody>
 </table>
-<h3 id="ubiquiti-edgeswitch-8-poe-als01">Ubiquiti EdgeSwitch 8 PoE (<code>ALS01</code>)</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Port</th>
-<th style="text-align: left;">Profile</th>
-<th style="text-align: left;">Connected Device</th>
-<th style="text-align: left;">PoE Mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">Trunk</td>
-<td style="text-align: left;"><strong>uplink to FW01</strong></td>
-<td style="text-align: left;">POE+ (0W)</td>
-</tr>
-<tr>
-<td style="text-align: left;">2-8</td>
-<td style="text-align: left;">Access/Trunk</td>
-<td style="text-align: left;">Servers / IoT</td>
-<td style="text-align: left;"><em>As needed</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="mikrotik-hap-ac-lite-ap01">MikroTik hAP ac lite (<code>AP01</code>)</h3>
-<p><em>Radio Configuration:</em>
-- <strong>wlan1 (2.4GHz):</strong> Legacy/IoT devices
-- <strong>wlan2 (5GHz):</strong> High-speed clients</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This device currently serves the home wifi, this is done to generate some "real" traffic on the network.<br />
+While not necessarily best practice, it allows me to spot issues faster.</p>
+</div>
+<h2 id="4-security-decisions">4. Security Decisions</h2>
+<ul>
+<li><strong>Authentication:</strong> WPA2-PSK (AES-CCMP).</li>
+<li><strong>Key:</strong> An easy-to-remember password given to guests.</li>
+<li><strong>Isolation:</strong> Client-to-Client forwarding is allowed by default on the AP Bridge, but Inter-VLAN traffic is blocked by the Firewall.</li>
+</ul>
+<h2 id="5-implementation-logic-mikrotik">5. Implementation Logic (MikroTik)</h2>
+<p>The generic MikroTik implementation places all wireless clients into a specific VLAN tag at the AP ingress.
+- <strong>PVID/VLAN Mapping:</strong> <code>wlan1</code> and <code>wlan2</code> interfaces are set with PVID=20.
+- <strong>Bridge Filtering:</strong> The bridge tags frames from these interfaces with VLAN 20 before sending them up the trunk to the Core Switch.</p>
 
 
 
@@ -1066,10 +1399,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

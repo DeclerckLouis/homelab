@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://lab.packetflow.be/homelab/01_network/02_logical/">
       
+      
+        <link rel="prev" href="../01_physical/">
+      
+      
+        <link rel="next" href="../03_device_decisions/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>HomeLab Documentation</title>
+        <title>Logical Layout - HomeLab Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#logical-layout" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -71,7 +82,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -91,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Logical Layout
             
           </span>
         </div>
@@ -158,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -179,7 +190,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -195,6 +206,8 @@
   
   
   
+    
+  
   
     
     
@@ -202,11 +215,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/homelab/01_network/01_physical/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_physical/" class="md-tabs__link">
           
   
   
@@ -227,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/status/" class="md-tabs__link">
+      <a href="../../../status/" class="md-tabs__link">
         
   
   
@@ -268,7 +283,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -286,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -365,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -445,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/archive/2026/" class="md-nav__link">
+      <a href="../../../blog/archive/2026/" class="md-nav__link">
         
   
   
@@ -533,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/category/administrative/" class="md-nav__link">
+      <a href="../../../blog/category/administrative/" class="md-nav__link">
         
   
   
@@ -573,24 +588,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -608,7 +628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -623,6 +643,8 @@
                 
   
   
+    
+  
   
   
     
@@ -633,11 +655,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -658,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -676,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/01_physical/" class="md-nav__link">
+      <a href="../01_physical/" class="md-nav__link">
         
   
   
@@ -701,10 +723,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/homelab/01_network/02_logical/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical Layout
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -720,6 +769,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-business-drivers-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Business Drivers &amp; Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-global-network-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Global Network Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Naming Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logical-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Logical Topology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ip-addressing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IP Addressing Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. IP Addressing Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-supernets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Supernets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-vlans-subnets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. VLANs &amp; Subnets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-routing-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Routing &amp; WAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Routing &amp; WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-routing-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Routing Protocols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-sd-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. SD-WAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Inter-VLAN Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -732,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/03_device_decisions/" class="md-nav__link">
+      <a href="../03_device_decisions/" class="md-nav__link">
         
   
   
@@ -760,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/04_security/" class="md-nav__link">
+      <a href="../04_security/" class="md-nav__link">
         
   
   
@@ -788,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/06_wireless/" class="md-nav__link">
+      <a href="../06_wireless/" class="md-nav__link">
         
   
   
@@ -874,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/02_systems/01_physical/" class="md-nav__link">
+      <a href="../../02_systems/01_physical/" class="md-nav__link">
         
   
   
@@ -917,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/status/" class="md-nav__link">
+      <a href="../../../status/" class="md-nav__link">
         
   
   
@@ -954,6 +1156,149 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-business-drivers-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Business Drivers &amp; Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-global-network-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Global Network Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Naming Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logical-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Logical Topology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ip-addressing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IP Addressing Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. IP Addressing Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-supernets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Supernets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-vlans-subnets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. VLANs &amp; Subnets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-routing-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Routing &amp; WAN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Routing &amp; WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-routing-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Routing Protocols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-sd-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. SD-WAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Inter-VLAN Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -971,11 +1316,242 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01_physical/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01_physical/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Network
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="logical-layout">Logical Layout</h1>
+<h2 id="1-business-drivers-goals">1. Business Drivers &amp; Goals</h2>
+<p>The <strong>Packetflow Homelab</strong> network typically serves two primary functions:
+1.  <strong>Production Home Network:</strong> Providing stable, high-speed internet access for daily use (Working from Home, Streaming, Gaming).
+2.  <strong>Experimental Lab:</strong> A playground for learning networking concepts (IPv6, BGP, SD-WAN, Segmentation) without disrupting our ability to watch netflix.</p>
+<p><strong>Key Goals:</strong>
+- <strong>Strict Segmentation:</strong> Isolating "Home" traffic from "Guest" and "Server" traffic.
+- <strong>IPv6 First:</strong> Implementing a dual-stack network with a focus on IPv6.
+- <strong>Vendor Diversity:</strong> Gaining proficiency with Fortinet, Ubiquiti, and MikroTik ecosystems.</p>
+<h2 id="2-global-network-design">2. Global Network Design</h2>
+<p>The network architecture is designed to support a multi-site topology, although currently only the primary site is active.</p>
+<ul>
+<li><strong>Home Office (HQ):</strong> The primary site hosting the core infrastructure (<code>10.10.0.0/16</code>).</li>
+<li><strong>Branch Office (Remote):</strong> A planned remote site for simulating site-to-site VPNs (<code>10.20.0.0/16</code>).</li>
+<li><strong>Cloud/VPS:</strong> External resources connected via VPN (e.g., VPS for off-site backups/monitoring).</li>
+</ul>
+<h2 id="3-naming-conventions">3. Naming Conventions</h2>
+<p>A consistent naming convention is used to identify devices and interfaces easily.</p>
+<p><strong>Format:</strong> <code>[ROLE][INDEX].[DOMAIN]</code></p>
+<ul>
+<li><strong>Roles:</strong><ul>
+<li><code>FW</code>: Firewall / Router (e.g., <code>FW01</code>)</li>
+<li><code>ALS</code>: Access Layer Switch (e.g., <code>ALS01</code>)</li>
+<li><code>DLS</code>: Distribution Layer Switch (e.g., <code>DLS01</code>)</li>
+<li><code>AP</code>: Access Point (e.g., <code>AP01</code>)</li>
+<li><code>SRV</code>: Server (e.g., <code>SRV01</code>)</li>
+</ul>
+</li>
+<li><strong>Domain:</strong> <code>lab.internal.packetflow.be</code></li>
+</ul>
+<p><strong>Interface Naming:</strong>
+- <strong>VLANs:</strong> <code>VLAN[ID]</code> (e.g., <code>VLAN10</code>)
+- <strong>L3 Interfaces:</strong> Interactive names (e.g., <code>wan</code>, <code>lan</code>, <code>dmz</code>)</p>
+<h2 id="4-logical-topology">4. Logical Topology</h2>
+<p><em>(Layer 2 and Layer 3 diagrams showing VLANs, Trunks, and Routing paths)</em></p>
+<p><strong>[Image Placeholder: Logical Topology Diagram]</strong></p>
+<h2 id="5-ip-addressing-scheme">5. IP Addressing Scheme</h2>
+<h3 id="51-supernets">5.1. Supernets</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Supernet</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>10.0.0.0/8</code></td>
+<td style="text-align: left;"><strong>PacketFlow</strong></td>
+<td style="text-align: left;">Global Supernet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>10.10.0.0/16</code></td>
+<td style="text-align: left;"><strong>Home Office</strong></td>
+<td style="text-align: left;">Primary Site (Lab &amp; Residence)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>10.20.0.0/16</code></td>
+<td style="text-align: left;"><strong>Branch Office</strong></td>
+<td style="text-align: left;">Remote Site</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-vlans-subnets">5.2. VLANs &amp; Subnets</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">VLAN ID</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">IPv4 Subnet</th>
+<th style="text-align: left;">IPv6 Subnet (ULA)</th>
+<th style="text-align: left;">Gateway</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>10</strong></td>
+<td style="text-align: left;"><code>Home</code></td>
+<td style="text-align: left;"><code>10.10.10.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:10::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Default Trusted Network.</strong> "Office" devices.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>20</strong></td>
+<td style="text-align: left;"><code>Guest</code></td>
+<td style="text-align: left;"><code>10.10.20.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:20::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Guest Network.</strong> Isolated Internet access only.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>30</strong></td>
+<td style="text-align: left;"><code>Servers</code></td>
+<td style="text-align: left;"><code>10.10.30.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:30::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Servers.</strong> Docker, VMs, Pis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>35</strong></td>
+<td style="text-align: left;"><code>DMZ</code></td>
+<td style="text-align: left;"><code>10.10.35.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:35::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>DMZ.</strong> Public facing services (e.g., HAProxy).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>99</strong></td>
+<td style="text-align: left;"><code>MGMT</code></td>
+<td style="text-align: left;"><code>10.10.99.0/24</code></td>
+<td style="text-align: left;"><code>fdb1:6575:ad8a:99::/64</code></td>
+<td style="text-align: left;"><code>.1</code></td>
+<td style="text-align: left;"><strong>Management.</strong> Network device management.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>666</strong></td>
+<td style="text-align: left;"><code>Blackhole</code></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>Dead VLAN.</strong> Used for Native VLAN security.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: IPv6 Local Link addresses for Gateways are manually set to <code>fe80::[VLAN_ID]:1</code> for consistency.</em></p>
+<h2 id="6-routing-wan">6. Routing &amp; WAN</h2>
+<h3 id="61-routing-protocols">6.1. Routing Protocols</h3>
+<ul>
+<li><strong>IGP:</strong> Currently using <strong>Connected</strong> and <strong>Static</strong> routing. OSPF/BGP planned for future Branch Office integration.</li>
+<li><strong>Default Route:</strong> <code>0.0.0.0/0</code> pointed to ISP Gateway via PPPoE/DHCP.</li>
+</ul>
+<h3 id="62-sd-wan">6.2. SD-WAN</h3>
+<ul>
+<li><strong>Interface:</strong> <code>virtual-wan-link</code></li>
+<li><strong>Members:</strong> <code>wan1</code> (ISP Uplink)</li>
+<li><strong>Strategy:</strong> Even with a single uplink, SD-WAN is used to abstract policies.</li>
+<li><strong>Rules:</strong><ul>
+<li>Source IP load balancing (default).</li>
+<li><code>0.0.0.0/0</code> -&gt; <code>virtual-wan-link</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="63-inter-vlan-routing">6.3. Inter-VLAN Routing</h3>
+<ul>
+<li>Performed by <strong>FortiGate 40F</strong>.</li>
+<li><strong>Policy:</strong> Default Deny. Traffic must be explicitly allowed via Firewall Policies.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1068,10 +1644,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

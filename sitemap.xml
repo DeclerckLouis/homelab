@@ -9,23 +9,43 @@
          <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/01_physical/</loc>
+         <loc>https://lab.packetflow.be/blog/</loc>
          <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/02_logical/</loc>
+         <loc>https://lab.packetflow.be/blog/2026/02/administrative/first-blog-post/</loc>
          <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/03_device_decisions/</loc>
+         <loc>https://lab.packetflow.be/homelab/01_network/01_physical/</loc>
          <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/04_security/</loc>
+         <loc>https://lab.packetflow.be/homelab/01_network/02_logical/</loc>
          <lastmod>2026-02-17</lastmod>
     </url>
     <url>
-         <loc>https://lab.packetflow.be/01_network/06_wireless/</loc>
+         <loc>https://lab.packetflow.be/homelab/01_network/03_device_decisions/</loc>
+         <lastmod>2026-02-17</lastmod>
+    </url>
+    <url>
+         <loc>https://lab.packetflow.be/homelab/01_network/04_security/</loc>
+         <lastmod>2026-02-17</lastmod>
+    </url>
+    <url>
+         <loc>https://lab.packetflow.be/homelab/01_network/06_wireless/</loc>
+         <lastmod>2026-02-17</lastmod>
+    </url>
+    <url>
+         <loc>https://lab.packetflow.be/homelab/02_systems/01_physical/</loc>
+         <lastmod>2026-02-17</lastmod>
+    </url>
+    <url>
+         <loc>https://lab.packetflow.be/blog/archive/2026/</loc>
+         <lastmod>2026-02-17</lastmod>
+    </url>
+    <url>
+         <loc>https://lab.packetflow.be/blog/category/administrative/</loc>
          <lastmod>2026-02-17</lastmod>
     </url>
 </urlset>

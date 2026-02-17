@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://lab.packetflow.be/homelab/01_network/03_device_decisions/">
       
+      
+        <link rel="prev" href="../02_logical/">
+      
+      
+        <link rel="next" href="../04_security/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>HomeLab Documentation</title>
+        <title>Device Decisions - HomeLab Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#basic-device-decisions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -71,7 +82,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-header__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -91,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Device Decisions
             
           </span>
         </div>
@@ -158,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -179,7 +190,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -195,6 +206,8 @@
   
   
   
+    
+  
   
     
     
@@ -202,11 +215,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/homelab/01_network/01_physical/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_physical/" class="md-tabs__link">
           
   
   
@@ -227,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/status/" class="md-tabs__link">
+      <a href="../../../status/" class="md-tabs__link">
         
   
   
@@ -268,7 +283,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
+    <a href="../../.." title="HomeLab Documentation" class="md-nav__button md-logo" aria-label="HomeLab Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -286,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -365,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -445,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/archive/2026/" class="md-nav__link">
+      <a href="../../../blog/archive/2026/" class="md-nav__link">
         
   
   
@@ -533,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/category/administrative/" class="md-nav__link">
+      <a href="../../../blog/category/administrative/" class="md-nav__link">
         
   
   
@@ -573,24 +588,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -608,7 +628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -623,6 +643,8 @@
                 
   
   
+    
+  
   
   
     
@@ -633,11 +655,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -658,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -676,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/01_physical/" class="md-nav__link">
+      <a href="../01_physical/" class="md-nav__link">
         
   
   
@@ -704,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/02_logical/" class="md-nav__link">
+      <a href="../02_logical/" class="md-nav__link">
         
   
   
@@ -729,10 +751,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/homelab/01_network/03_device_decisions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Decisions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -748,6 +797,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Design Rationale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-software-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Software Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuration-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Configuration Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuration Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-interface-configuration-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Interface Configuration (FortiGate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-switching-logic-ubiquiti-edgeswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Switching Logic (Ubiquiti EdgeSwitch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-wireless-logic-mikrotik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Wireless Logic (MikroTik)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-security-wireless-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Security &amp; Wireless Decisions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Security &amp; Wireless Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-security-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Security Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-wireless-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Wireless Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -760,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/04_security/" class="md-nav__link">
+      <a href="../04_security/" class="md-nav__link">
         
   
   
@@ -788,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/01_network/06_wireless/" class="md-nav__link">
+      <a href="../06_wireless/" class="md-nav__link">
         
   
   
@@ -874,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/homelab/02_systems/01_physical/" class="md-nav__link">
+      <a href="../../02_systems/01_physical/" class="md-nav__link">
         
   
   
@@ -917,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/status/" class="md-nav__link">
+      <a href="../../../status/" class="md-nav__link">
         
   
   
@@ -954,6 +1134,127 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Design Rationale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-software-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Software Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuration-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Configuration Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuration Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-interface-configuration-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Interface Configuration (FortiGate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-switching-logic-ubiquiti-edgeswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Switching Logic (Ubiquiti EdgeSwitch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-wireless-logic-mikrotik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Wireless Logic (MikroTik)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-security-wireless-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Security &amp; Wireless Decisions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Security &amp; Wireless Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-security-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Security Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-wireless-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Wireless Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -971,11 +1272,192 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01_physical/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01_physical/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Network
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="basic-device-decisions">Basic Device Decisions</h1>
+<h2 id="1-design-rationale">1. Design Rationale</h2>
+<p>The core principles driving device configuration are:
+1.  <strong>Automation Friendly:</strong> Configurations should be standardized to allow for future automation (e.g., Ansible/Terraform).
+2.  <strong>Security by Default:</strong> Deny-all policies, minimal open ports, and strict VLAN segmentation.
+3.  <strong>Consistency:</strong> Naming conventions and IP schemes must be identical across devices and sites.</p>
+<h2 id="2-software-standards">2. Software Standards</h2>
+<p>To ensure stability and feature compatibility, the following software versions are targeted:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device</th>
+<th style="text-align: left;">Software</th>
+<th style="text-align: left;">Target Version</th>
+<th style="text-align: left;">Update Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>FortiGate 40F</strong></td>
+<td style="text-align: left;">FortiOS</td>
+<td style="text-align: left;">7.2.x (Mature)</td>
+<td style="text-align: left;">Manual update after backing up config.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EdgeSwitch</strong></td>
+<td style="text-align: left;">EdgeSwitch Firmware</td>
+<td style="text-align: left;">Latest Stable</td>
+<td style="text-align: left;">As needed for security patches.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MikroTik hAP</strong></td>
+<td style="text-align: left;">RouterOS</td>
+<td style="text-align: left;">v7.x (Stable)</td>
+<td style="text-align: left;">Auto-update disabled; manual review required.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-configuration-standards">3. Configuration Standards</h2>
+<h3 id="31-interface-configuration-fortigate">3.1. Interface Configuration (FortiGate)</h3>
+<p>Interfaces follow a strict template for IPv4 and IPv6 dual-stack connectivity.</p>
+<div class="language-bash highlight"><span class="filename">Example: config of VLAN 10</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>config<span class="w"> </span>system<span class="w"> </span>interface
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>edit<span class="w"> </span><span class="s2">&quot;VLAN10&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>vdom<span class="w"> </span><span class="s2">&quot;root&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>ip<span class="w"> </span><span class="m">10</span>.10.10.1<span class="w"> </span><span class="m">255</span>.255.255.0
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>allowaccess<span class="w"> </span>ping
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span><span class="nb">alias</span><span class="w"> </span><span class="s2">&quot;VLAN Default&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>device-identification<span class="w"> </span><span class="nb">enable</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>role<span class="w"> </span>lan
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>snmp-index<span class="w"> </span><span class="m">12</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>ip-managed-by-fortiipam<span class="w"> </span>disable
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span>config<span class="w"> </span>ipv6
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nb">set</span><span class="w"> </span>ip6-address<span class="w"> </span>fdb1:6575:ad8a:10::1/64
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nb">set</span><span class="w"> </span>ip6-allowaccess<span class="w"> </span>ping
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span>config<span class="w"> </span>ip6-extra-addr
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span>edit<span class="w"> </span>fe80::10:1/64<span class="w"> </span><span class="c1">#(1)!</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span>next
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span>end
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="nb">set</span><span class="w"> </span>ip6-send-adv<span class="w"> </span><span class="nb">enable</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nb">set</span><span class="w"> </span>ip6-other-flag<span class="w"> </span><span class="nb">enable</span><span class="w"> </span><span class="c1">#(2)!</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span>config<span class="w"> </span>ip6-prefix-list
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                </span>edit<span class="w"> </span>fdb1:6575:ad8a:10::/64
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                </span>next
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span>end
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span>end
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>interface<span class="w"> </span><span class="s2">&quot;mgmt&quot;</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>vlanid<span class="w"> </span><span class="m">10</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span>next
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>end
+</span></code></pre></div>
+<ol>
+<li><strong>Link Local Address:</strong> Manually set to <code>fe80::[VLAN_ID]:1</code> for consistency and ease of future troubleshooting.</li>
+<li><strong>Other Flag:</strong> This flag is set to pass extra information to the clients, such as DNS servers and domain names. (not configured yet)</li>
+</ol>
+<h3 id="32-switching-logic-ubiquiti-edgeswitch">3.2. Switching Logic (Ubiquiti EdgeSwitch)</h3>
+<ul>
+<li><strong>VLANs:</strong> Must be defined in the VLAN database.</li>
+<li><strong>Trunking:</strong> Uplinks are tagged for all active VLANs.</li>
+<li><strong>Native VLAN:</strong> Unused ports and Trunks use <code>VLAN 666</code> (Blackhole) as Native to prevent VLAN hopping.</li>
+<li><strong>Spanning Tree:</strong> RSTP enabled globally.</li>
+</ul>
+<h3 id="33-wireless-logic-mikrotik">3.3. Wireless Logic (MikroTik)</h3>
+<ul>
+<li><strong>Mode:</strong> Bridge AP with VLAN filtering.</li>
+<li><strong>SSID Mapping:</strong> SSIDs are mapped to specific VLANs at the bridge ingress.</li>
+<li><strong>Management:</strong> In-band management on VLAN 99.</li>
+</ul>
+<h2 id="4-security-wireless-decisions">4. Security &amp; Wireless Decisions</h2>
+<h3 id="41-security-strategy">4.1. Security Strategy</h3>
+<ul>
+<li><strong>Zone-Based Firewalling:</strong> Traffic is grouped into zones (LAN, Guest, Server, DMZ) to simplify policy management.</li>
+<li><strong>Implicit Deny:</strong> The final rule in the policy set is always a DENY ALL.</li>
+<li><strong>Deep Dive:</strong> See <a href="../04_security/">04_security.md</a> for detailed firewall policies and logic.</li>
+</ul>
+<h3 id="42-wireless-strategy">4.2. Wireless Strategy</h3>
+<ul>
+<li><strong>Frequency Planning:</strong> 2.4GHz for legacy/IoT, 5GHz for high-speed clients.</li>
+<li><strong>Guest Access:</strong> Isolated on VLAN 20 with no access to internal RFC1918 ranges.</li>
+<li><strong>Deep Dive:</strong> See <a href="../06_wireless/">06_wireless.md</a> for radio tuning and SSID details.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1068,10 +1550,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
