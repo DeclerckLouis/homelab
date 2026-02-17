@@ -20,14 +20,17 @@ To ensure stability and feature compatibility, the following software versions a
 ### 3.1. Interface Configuration (FortiGate)
 Interfaces follow a strict template for IPv4 and IPv6 dual-stack connectivity.
 
-```bash title="Example: VLAN 10"
+```bash title="Example: config of VLAN 10"
 config system interface
     edit "VLAN10"
         set vdom "root"
         set ip 10.10.10.1 255.255.255.0
         set allowaccess ping
         set alias "VLAN Default"
+        set device-identification enable
         set role lan
+        set snmp-index 12
+        set ip-managed-by-fortiipam disable
         config ipv6
             set ip6-address fdb1:6575:ad8a:10::1/64
             set ip6-allowaccess ping
@@ -36,14 +39,20 @@ config system interface
                 next
             end
             set ip6-send-adv enable
-            set ip6-other-flag enable
+            set ip6-other-flag enable #(2)!
+            config ip6-prefix-list
+                edit fdb1:6575:ad8a:10::/64
+                next
+            end
         end
+        set interface "mgmt"
         set vlanid 10
     next
 end
 ```
 
 1.  **Link Local Address:** Manually set to `fe80::[VLAN_ID]:1` for consistency and ease of future troubleshooting.
+2.  **Other Flag:** This flag is set to pass extra information to the clients, such as DNS servers and domain names. (not configured yet)
 
 ### 3.2. Switching Logic (Ubiquiti EdgeSwitch)
 - **VLANs:** Must be defined in the VLAN database.
