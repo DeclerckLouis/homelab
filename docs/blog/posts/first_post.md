@@ -6,19 +6,16 @@ tags: [documentation]
 ---
 
 ## This is my first blog post
-
-I'm using MkDocs to generate this documentation.
+This is a placeholder blog post.
+<!-- more -->
 
 ## Why MkDocs?
-
 I wanted a simple way to document my homelab and share it with others.
 
 ## What is MkDocs?
-
 MkDocs is a static site generator for project documentation. It's written in Python and uses Markdown for content.
 
 ## How to use it?
-
 1. Create a `docs` directory in your project.
 2. Create Markdown files in the `docs` directory.
 3. Create a `mkdocs.yml` file to configure your site.
