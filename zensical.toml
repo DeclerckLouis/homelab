@@ -1,9 +1,28 @@
+[project]
 site_name = "HomeLab Documentation"
 site_description = "A small documentation site to keep track of my homelab and tests."
 site_author = "Louis Declerck"
 site_url = "https://lab.packetflow.be"
 copyright = "Copyright &copy; 2026 Louis Declerck"
 
+nav = [
+  { "Home" = "index.md" },
+  { "Blog" = "blog/index.md" },
+  { "Documentation" = [
+      { "Network" = [
+          { "Physical Layout" = "homelab/01_network/01_physical.md" },
+          { "Logical Layout" = "homelab/01_network/02_logical.md" },
+          { "Device Decisions" = "homelab/01_network/03_device_decisions.md" },
+          { "Security" = "homelab/01_network/04_security.md" },
+          { "Wireless" = "homelab/01_network/06_wireless.md" }
+      ]},
+      { "Systems" = [
+          { "Physical Layout" = "homelab/02_systems/01_physical.md" }
+      ]}
+  ]}
+]
+
+# 2. Table definitions go last
 # admonitions
 [project.markdown_extensions.admonition]
 
@@ -12,23 +31,9 @@ copyright = "Copyright &copy; 2026 Louis Declerck"
 anchor_linenums = true
 line_spans = "__span"
 pygments_lang_class = true
-[project.markdown_extensions.pymdownx.inlinehilite]
-[project.markdown_extensions.pymdownx.snippets]
-[project.markdown_extensions.pymdownx.superfences]
 
-nav= [
-  { "Home" = "index.md"},
-  {"Blog" = "blog/index.md"},
-  {"Documentation" = [
-     {"Network" = [
-       { "Physical Layout" = "homelab/01_network/01_physical.md" },
-       { "Logical Layout" = "homelab/01_network/02_logical.md" },
-       { "Device Decisions" =  "homelab/01_network/03_device_decisions.md" },
-       { "Security" = "homelab/01_network/04_security.md" },
-       { "Wireless" = "homelab/01_network/06_wireless.md" }
-     ]},
-    
-    {"Systems" = [
-      { "Physical Layout" = "homelab/02_systems/01_physical.md" }
-    ]}
-]
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.pymdownx.snippets]
+
+[project.markdown_extensions.pymdownx.superfences]
