@@ -5,6 +5,7 @@ site_author = "Louis Declerck"
 site_url = "https://lab.packetflow.be"
 copyright = "Copyright &copy; 2026 Louis Declerck"
 
+# Navigation
 nav = [
   { "Home" = "index.md" },
   { "Blog" = "blog/index.md" },
@@ -22,18 +23,65 @@ nav = [
   ]}
 ]
 
-# 2. Table definitions go last
-# admonitions
+# Theme
+[project.theme]
+name = "material"
+language = "en"
+features = [
+  "navigation.path",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "content.code.copy",
+  "content.code.select",
+  "content.code.annotate"
+]
+
+# Plugins
+[project.plugins.search]
+[project.plugins.tags]
+
+[project.plugins.blog]
+blog_dir = "blog"
+blog_toc = true
+post_date_format = "long"
+post_url_date_format = "yyyy/MM"
+post_url_format = "{date}/{categories}/{slug}"
+
+# Markdown extensions
 [project.markdown_extensions.admonition]
 
 # Code blocks
-[project.markdown_extensions.pymdownx.highlight]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions."pymdownx.inlinehilite"]
+[project.markdown_extensions."pymdownx.details"]
+[project.markdown_extensions."pymdownx.snippets"]
+[project.markdown_extensions."pymdownx.superfences"]
+
+[project.markdown_extensions."pymdownx.highlight"]
 anchor_linenums = true
 line_spans = "__span"
 pygments_lang_class = true
 
-[project.markdown_extensions.pymdownx.inlinehilite]
+# Social links
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/declercklouis"
 
-[project.markdown_extensions.pymdownx.snippets]
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/declercklouis"
 
-[project.markdown_extensions.pymdownx.superfences]
+[[project.extra.social]]
+icon = "fontawesome/solid/globe"
+link = "https://packetflow.be"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/envelope"
+link = "mailto:louis@packetflow.be"
+
+[project.markdown_extensions."pymdownx.emoji"]
+# Note: TOML doesn't support YAML's `!!python/name:` tags natively. 
+# Providing the import path as a string is the standard approach for TOML configurations.
+emoji_index = "material.extensions.emoji.twemoji"
+emoji_generator = "material.extensions.emoji.to_svg"
