@@ -18,7 +18,8 @@ nav = [
           { "Wireless" = "homelab/01_network/06_wireless.md" }
       ]},
       { "Systems" = [
-          { "Physical Layout" = "homelab/02_systems/01_physical.md" }
+          { "Overview" = "homelab/02_systems/01_overview.md" },
+          { "AWX" = "homelab/02_systems/02_awx.md" }
       ]}
   ]}
 ]
