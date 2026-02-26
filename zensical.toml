@@ -83,5 +83,5 @@ link = "mailto:louis@packetflow.be"
 [project.markdown_extensions."pymdownx.emoji"]
 # Note: TOML doesn't support YAML's `!!python/name:` tags natively. 
 # Providing the import path as a string is the standard approach for TOML configurations.
-emoji_index = "material.extensions.emoji.twemoji"
-emoji_generator = "material.extensions.emoji.to_svg"
+emoji_index = "pymdownx.emoji.twemoji"
+emoji_generator = "pymdownx.emoji.to_svg"
