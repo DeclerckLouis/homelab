@@ -23,13 +23,15 @@ nav = [
           { "Overview" = "homelab/02_systems/01_overview.md" },
           { "AWX" = "homelab/02_systems/02_awx.md" }
       ]}
-  ]}
+  ]},
+  {"status" = "status.md" }
 ]
 
 # Theme
 [project.theme]
 name = "material"
 language = "en"
+favicon = "img/favicon.ico"
 features = [
   "navigation.path",
   "navigation.tabs",
