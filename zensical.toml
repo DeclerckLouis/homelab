@@ -40,6 +40,17 @@ features = [
   "content.code.annotate"
 ]
 
+# Dark and light mode 
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
 # Plugins
 [project.plugins.search]
 [project.plugins.tags]
