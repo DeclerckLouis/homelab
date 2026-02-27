@@ -4,11 +4,13 @@ site_description = "A small documentation site to keep track of my homelab and t
 site_author = "Louis Declerck"
 site_url = "https://lab.packetflow.be"
 copyright = "Copyright &copy; 2026 Louis Declerck"
+repo_url = "https://github.com/declercklouis/homelab"
+repo_name = "declercklouis/homelab"
 
 # Navigation
 nav = [
   { "Home" = "index.md" },
-  { "Blog" = "blog/index.md" },
+  {"About me" = "about.md" },
   { "Documentation" = [
       { "Network" = [
           { "Physical Layout" = "homelab/01_network/01_physical.md" },
@@ -41,13 +43,6 @@ features = [
 # Plugins
 [project.plugins.search]
 [project.plugins.tags]
-
-[project.plugins.blog]
-blog_dir = "blog"
-blog_toc = true
-post_date_format = "long"
-post_url_date_format = "yyyy/MM"
-post_url_format = "{date}/{categories}/{slug}"
 
 # Markdown extensions
 [project.markdown_extensions.admonition]
