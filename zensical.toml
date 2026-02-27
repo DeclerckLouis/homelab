@@ -33,11 +33,13 @@ name = "material"
 language = "en"
 favicon = "img/favicon.ico"
 features = [
+  "toc.follow",
   "navigation.path",
   "navigation.tabs",
   "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",
+  "navigation.expand",
   "navigation.instant",
   "navigation.instant.prefetch",
   "content.code.copy",
