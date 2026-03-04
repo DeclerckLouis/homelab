@@ -20,7 +20,7 @@ AWX does not run on ARM platforms, so this setup uses RHEL on a dedicated machin
 Install k3s using the quickstart script.  
 This is the most basic way to get k3s up and running.  
 
-```bash title="k3s installation command"
+```bash title="Command to install k3s"
 sudo dnf install -y kernel-modules-extra (1)!
 curl -sfL https://get.k3s.io | sh -
 watch sudo kubectl get nodes #(2)!
@@ -58,7 +58,7 @@ git checkout tags/2.19.1 #(1)!
 #### Deploy AWX operator
 
 Deploy the operator using a kustomization.yaml file with the following contents:
-```yaml title="kustomization.yaml for awx-operator deployment"
+```yaml title="kustomization.yaml"
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
@@ -112,7 +112,7 @@ awx-operator-controller-manager-6686bb5899-glmf4   2/2     Running     9 (27h ag
 #### Deploy AWX instance
 
 Modify the `awx-demo.yml` file in the repository as follows:
-```yaml title="awx-demo.yml for AWX instance deployment"
+```yaml title="awx-demo.yml"
 ---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
@@ -129,14 +129,14 @@ spec:
 
 Set up a DNS record for `awx.internal.packetflow.be` pointing to the machine IP, or add an entry in the local hosts file pointing to localhost.
 
-```yaml title="Example hosts file entry for AWX access"
+```yaml title="/etc/hosts"
 127.0.0.1   awx.internal.packetflow.be #(1)!
 ```
 
 1.  This needs to be the same hostname as specified in the `awx-demo.yml` file.  
    
 Finally, deploy the AWX instance by uncommenting the `awx-demo.yml` line in the `kustomization.yaml` file and running the same command as before:
-```yaml title="kustomization.yaml with awx-demo.yml uncommented"
+```yaml title="kustomization.yaml"
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
