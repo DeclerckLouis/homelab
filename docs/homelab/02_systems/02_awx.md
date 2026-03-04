@@ -129,7 +129,7 @@ spec:
 
 Set up a DNS record for `awx.internal.packetflow.be` pointing to the machine IP, or add an entry in the local hosts file pointing to localhost.
 
-```txt title="Example hosts file entry for AWX access"
+```yaml title="Example hosts file entry for AWX access"
 127.0.0.1   awx.internal.packetflow.be #(1)!
 ```
 
