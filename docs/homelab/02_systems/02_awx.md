@@ -81,7 +81,7 @@ Deploy the manifests by running:
 ```bash title="Command to deploy awx-operator"
 kubectl apply -k .
 ```
-``` title="Output"
+```console title="Output"
 namespace/awx created
 customresourcedefinition.apiextensions.k8s.io/awxbackups.awx.ansible.com created
 customresourcedefinition.apiextensions.k8s.io/awxrestores.awx.ansible.com created
@@ -104,7 +104,7 @@ This can be verified by running:
 ```bash title="Command to check awx-operator deployment status"
 kubectl get pods -n awx
 ```
-``` title="Output"
+```console title="Output"
 NAME                                               READY   STATUS      RESTARTS      AGE
 awx-operator-controller-manager-6686bb5899-glmf4   2/2     Running     9 (27h ago)   5d15h
 ```
@@ -162,7 +162,7 @@ Follow the progress by checking the logs of the deployment:
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager -n awx
 ```
 
-```ansible title="Output"
+```console title="Output"
 TASK [installer : Start installation if auto_upgrade is false and deployment is missing] ***
 task path: /opt/ansible/roles/installer/tasks/main.yml:31
 
