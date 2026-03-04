@@ -1,12 +1,12 @@
-# Packetflow Homelab website
+# Packetflow homelab website
 
 ## Welcome
 Welcome to the documentation for the **Packetflow Homelab**.  
 This project serves as a practical testing ground for network engineering concepts,  
-specifically focusing on **network documentation** topics (See [Documentation](./homelab/01_network/01_physical.md)) and **small projects**.  
+specifically focusing on **network documentation** topics (see [Documentation](./homelab/01_network/01_physical.md)) and **small projects**.  
 It's subject to many changes and should **not** be considered production-grade. (Although that's what I aim for with the [Documentation](./homelab/01_network/01_physical.md))  
 
-## Lab Overview
+## Lab overview
 
 - **Primary Router:** Fortinet FortiGate 40F (handling Routing, Security, SD-WAN).  
 - **Core Switching:** Ubiquiti EdgeSwitch 8 PoE (handling VLANs, PoE).  
@@ -14,7 +14,7 @@ It's subject to many changes and should **not** be considered production-grade. 
 - **Servers:**  One Raspberry Pi 4, One Raspberry Pi 5
 - **Workstations:** One Windows 10 Desktop, one Red Hat Enterprise Linux 10 Laptop  
 
-## Network Documentation Structure
+## Network documentation structure
 The documentation is currently focused on networking, and has been structured into sections within the **Network** module:
 
 ### 1. [Physical Layout](homelab/01_network/01_physical.md)  
@@ -44,7 +44,7 @@ Documents the **Security policies** used.
 Design decisions for the `Declerck-Cardon` SSID, frequency planning, and security standards. 
 
 
-## Future Plans
+## Future plans
 - Add another hAP ac lite to act as second switch.
 - Add another router to act as remote/branch office router.
 - Replace my current Telenet modem with a new one to support IPv6 Global Unicast Addressing in all VLANs.  
