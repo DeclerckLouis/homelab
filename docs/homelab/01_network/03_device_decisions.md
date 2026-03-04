@@ -1,23 +1,23 @@
-# Basic Device Decisions
+# Basic device decisions
 
-## 1. Design Rationale
+## 1. Design rationale
 The core principles driving device configuration are:
-1.  **Automation Friendly:** Configurations should be standardized to allow for future automation (e.g., Ansible/Terraform).
-2.  **Security by Default:** Deny-all policies, minimal open ports, and strict VLAN segmentation.
+1.  **Automation Friendly:** You can standardize configurations to allow for future automation (for example, Ansible/Terraform).
+2.  **Security by Default:** You apply deny-all policies, minimal open ports, and strict VLAN segmentation.
 3.  **Consistency:** Naming conventions and IP schemes must be identical across devices and sites.
 
 ## 2. Software Standards
 To ensure stability and feature compatibility, the following software versions are targeted:
 
-| Device | Software | Target Version | Update Policy |
-| :--- | :--- | :--- | :--- |
-| **FortiGate 40F** | FortiOS | 7.2.x (Mature) | Manual update after backing up config. |
-| **EdgeSwitch** | EdgeSwitch Firmware | Latest Stable | As needed for security patches. |
-| **MikroTik hAP** | RouterOS | v7.x (Stable) | Auto-update disabled; manual review required. |
+| Device            | Software            | Target Version | Update Policy                                 |
+| :---------------- | :------------------ | :------------- | :-------------------------------------------- |
+| **FortiGate 40F** | FortiOS             | 7.2.x (Mature) | Manual update after backing up config.        |
+| **EdgeSwitch**    | EdgeSwitch Firmware | Latest Stable  | As needed for security patches.               |
+| **MikroTik hAP**  | RouterOS            | v7.x (Stable)  | Auto-update disabled; manual review required. |
 
-## 3. Configuration Standards
+## 3. Configuration standards
 
-### 3.1. Interface Configuration (FortiGate)
+### 3.1. Interface configuration (FortiGate)
 Interfaces follow a strict template for IPv4 and IPv6 dual-stack connectivity.
 
 ```bash title="Example: config of VLAN 10"
@@ -54,25 +54,25 @@ end
 1.  **Link Local Address:** Manually set to `fe80::[VLAN_ID]:1` for consistency and ease of future troubleshooting.
 2.  **Other Flag:** This flag is set to pass extra information to the clients, such as DNS servers and domain names. (not configured yet)
 
-### 3.2. Switching Logic (Ubiquiti EdgeSwitch)
+### 3.2. Switching logic (Ubiquiti EdgeSwitch)
 - **VLANs:** Must be defined in the VLAN database.
 - **Trunking:** Uplinks are tagged for all active VLANs.
 - **Native VLAN:** Unused ports and Trunks use `VLAN 666` (Blackhole) as Native to prevent VLAN hopping.
 - **Spanning Tree:** RSTP enabled globally.
 
-### 3.3. Wireless Logic (MikroTik)
+### 3.3. Wireless logic (MikroTik)
 - **Mode:** Bridge AP with VLAN filtering.
 - **SSID Mapping:** SSIDs are mapped to specific VLANs at the bridge ingress.
 - **Management:** In-band management on VLAN 99.
 
-## 4. Security & Wireless Decisions
+## 4. Security and wireless decisions
 
-### 4.1. Security Strategy
+### 4.1. Security strategy
 - **Zone-Based Firewalling:** Traffic is grouped into zones (LAN, Guest, Server, DMZ) to simplify policy management.
 - **Implicit Deny:** The final rule in the policy set is always a DENY ALL.
 - **Deep Dive:** See [04_security.md](04_security.md) for detailed firewall policies and logic.
 
-### 4.2. Wireless Strategy
+### 4.2. Wireless strategy
 - **Frequency Planning:** 2.4GHz for legacy/IoT, 5GHz for high-speed clients.
 - **Guest Access:** Isolated on VLAN 20 with no access to internal RFC1918 ranges.
 - **Deep Dive:** See [06_wireless.md](06_wireless.md) for radio tuning and SSID details.

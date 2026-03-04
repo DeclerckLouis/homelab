@@ -1,19 +1,19 @@
 # Wireless Configuration
 
 ## 1. Overview
-Wireless connectivity is provided by a **MikroTik HAP ac Lite** that I had laying around.  
-The WiFi logic is separate from the routing core (FortiGate), operating in "Bridge AP" mode.  
+Wireless connectivity is provided by a **MikroTik hAP ac lite**.  
+The WiFi logic is separate from the routing core (FortiGate), operating in Bridge AP mode.  
 
 ## 2. Access Points
-| Device | Model | Location | Management IP |
-| :--- | :--- | :--- | :--- |
-| **AP01** | MikroTik hAP ac lite | Central | `10.10.99.x` (DHCP) |
+| Device   | Model                | Location | Management IP       |
+| :------- | :------------------- | :------- | :------------------ |
+| **AP01** | MikroTik hAP ac lite | Central  | `10.10.99.x` (DHCP) |
 
-## 3. SSIDs & Frequency Planning
+## 3. SSIDs and frequency planning
 
-| SSID | Band | Frequency | Channel Width | Target VLAN | Usage |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Declerck-Cardon** | 5 GHz | *Auto* | 40 MHz | **20** (Guest) | Any guest clients |
+| SSID                | Band  | Frequency | Channel Width | Target VLAN    | Usage             |
+| :------------------ | :---- | :-------- | :------------ | :------------- | :---------------- |
+| **Declerck-Cardon** | 5 GHz | *Auto*    | 40 MHz        | **20** (Guest) | Any guest clients |
 
 !!! note "Note"
     This device currently serves the home wifi, this is done to generate some "real" traffic on the network.  
