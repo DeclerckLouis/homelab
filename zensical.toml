@@ -6,6 +6,7 @@ site_url = "https://lab.packetflow.be"
 copyright = "Copyright &copy; 2026 Louis Declerck"
 repo_url = "https://github.com/declercklouis/homelab"
 repo_name = "declercklouis/homelab"
+extra_css = ["stylesheets/extra.css"]
 
 # Navigation
 nav = [
