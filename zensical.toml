@@ -80,18 +80,22 @@ pygments_lang_class = true
 
 # Social links
 [[project.extra.social]]
+name = "GitHub Repository of this project"
 icon = "fontawesome/brands/github"
 link = "https://github.com/declercklouis"
 
 [[project.extra.social]]
-icon = "fontawesome/brands/linkedin"
-link = "https://www.linkedin.com/in/declercklouis"
-
-[[project.extra.social]]
+name = "PacketFlow Website"
 icon = "fontawesome/solid/globe"
 link = "https://packetflow.be"
 
 [[project.extra.social]]
+name = "Louis' LinkedIn"
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/declercklouis"
+
+[[project.extra.social]]
+name = "Louis' Email"
 icon = "fontawesome/solid/envelope"
 link = "mailto:louis@packetflow.be"
 
