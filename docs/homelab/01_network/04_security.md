@@ -1,14 +1,15 @@
 # Security and policies
 
 ## 1. Overview
+
 The **FortiGate 40F** acts as a stateful firewall.  
-I'm also using an **implicit deny rule** at the end of the policy list.  
+An **implicit deny rule** applies at the end of the policy list.  
 
-## 2. Firewall zones (will not be used)
+## 2. Firewall zones (not used)
 
-!!! note "Will not be used"
+!!! note "Not used"
     Due to the VLANs already being used in the hardware switch, you cannot add them to zones.
-    You might look into this again, or redo the whole FortiGate setup later for a firewall-focused lab.
+    You might reconsider this later or redo the whole FortiGate setup for a firewall-focused lab.
 
 - **LAN_Trusted:** VLAN 10 (Default)  
 - **LAN_Guest:** VLAN 20 (Guest)  
@@ -19,8 +20,8 @@ I'm also using an **implicit deny rule** at the end of the policy list.
 
 !!! note "Currently 2 Linux servers and no printers"
     Currently running 2 Linux servers (Grafana and Netbox, neither in the DMZ).
-    A future server for the DMZ is HAProxy.  
-    An IoT VLAN will follow with printers (VLAN31 IoT) which will have its own zone.
+    Future deployments include HAProxy for the DMZ.  
+    An IoT VLAN (VLAN31 IoT) with printers has its own zone.
 
 ## 3. Firewall Policies
 The following policies are currently active on the FortiGate:
