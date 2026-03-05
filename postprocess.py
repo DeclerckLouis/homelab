@@ -6,14 +6,12 @@ if __name__ == "__main__":
         site_dir="site",  # Your build output directory
         docs_dir="docs",  # Your source docs directory
         site_url="https://lab.packetflow.be",
-        default_image="",
         default_author="declerck.louis@outlook.com",
         add_desc=True,
         add_image=True,
-        add_authors=True,
+        add_keywords=True,
         add_json_ld=True,
         add_share_buttons=True,
         add_css=True,
-        add_copy_llm=True,
         verbose=True,
     )
