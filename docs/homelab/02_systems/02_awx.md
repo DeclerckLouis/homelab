@@ -21,12 +21,13 @@ Install k3s using the quickstart script.
 This is the most basic way to get k3s up and running.  
 
 ```bash title="Command to install k3s"
-sudo dnf install -y kernel-modules-extra (1)!
+sudo dnf install -y kernel-modules-extra #(1)!
 curl -sfL https://get.k3s.io | sh -
 watch sudo kubectl get nodes #(2)!
 ```
+
 1.  The `kernel-modules-extra` package is required for k3s to function properly.  
-    Ref. [k3s requirements](https://docs.k3s.io/installation/requirements?os=rhel)
+    See [k3s requirements](https://docs.k3s.io/installation/requirements?os=rhel)
 2.  The `watch` command can be interrupted with `Ctrl + C` once the node is ready.  
 
 Next, configure the local firewall to allow the network used by k3s to communicate properly.  
@@ -37,8 +38,8 @@ firewall-cmd --permanent --zone=trusted --add-source=10.42.0.0/16 #pods
 firewall-cmd --permanent --zone=trusted --add-source=10.43.0.0/16 #services
 firewall-cmd --reload
 ```
-!!! Note
-    If you skip this step, the deployment of the awx-web deployment will fail and get stuck in `crashloopbackoff` state.
+!!! warning
+    Skipping this step will result in the awx-web deployment failing and getting stuck in `crashloopbackoff` state.
 
 ### AWX setup
 
@@ -175,3 +176,134 @@ task path: /opt/ansible/roles/installer/tasks/main.yml:31
 PLAY RECAP *********************************************************************
 localhost                  : ok=89   changed=0    unreachable=0    failed=0    skipped=84   rescued=0    ignored=1  
 ```
+
+### NetBox setup
+
+### Installation
+
+You can install NetBox locally or use a free instance from [NetBoxLabs](https://netboxlabs.com/).  
+For the local install, follow the [NetBox installation guide](https://netboxlabs.com/docs/netbox/installation/).  
+
+??? note "NetBoxLabs"
+    NetBoxLabs, the company behind the NetBox Cloud offering, provides a free tier.  
+    This tier includes the following, and is also used for this project:
+    - Private instance
+    - 100 devices
+    - 500 IP addresses
+    - 10k API requests per month
+    - Automatic upgrades and backups
+    - 2 Operational branches
+
+#### Structure
+
+Not all features are required for this project, but they help supplement your documentation.  
+
+!!! info "Demo data"
+    When using NetBox Cloud, start with demo data enabled and then delete the unnecessary data.
+    This helps you understand the structure of NetBox and how to use it.
+
+##### Organization
+
+Regions, Sites, Locations, and Racks model the physical location of devices.  
+Use these to filter devices based on location in your Ansible inventory.  
+
+```bash title="Localization used in the PacketFlow NetBox instance"
+Region: Europe
+  Region: Belgium
+    Site: Snellegem office
+      Location: Office
+      Location: Server Room
+  Region: France
+....
+```
+
+##### Devices preparation
+
+This is the most important part of the setup.  
+Create manufacturers, device types, and platforms before adding devices.  
+**Manufacturers**:
+
+Create a manufacturer for each brand of device you have (for example, Fortinet, MikroTik).  
+If using the device type library, ensure the names match the manufacturer names used in the library.
+
+**Device types**:
+
+Create a device type for each device model you have.
+
+!!! tip "Device type library"
+    The NetBox community maintains a [device type library](https://github.com/netbox-community/devicetype-library) with pre-made device types.   
+    Import them into your instance manually or using the [device type library import](https://github.com/netbox-community/Device-Type-Library-Import) tool.  
+    This saves time but uses many API calls. Be mindful of API limits if using NetBox Cloud.  
+
+**Platforms**:
+When paired with config contexts, platforms give Ansible the necessary information to connect to devices.  
+The platform name should match the `ansible_network_os` variable you use in the Ansible inventory.  
+Link them to the correct manufacturer.  
+
+```bash title="Platforms for the PacketFlow NetBox instance"
+Platform: fortinet.fortios.fortios #(1)! 
+  Manufacturer: Fortinet
+Platform: mikrotik.routeros.routeros
+    Manufacturer: MikroTik
+```
+
+1.  The value must be the actual plugin name, in this case `fortinet.fortios.fortios`, not just `fortinet.fortios`.  
+    This is required for the ansible inventory to work properly. 
+
+??? note
+    You can optionally link the platform to a device type, though this is not required.
+
+##### Devices
+
+Create the devices themselves.
+
+| Name         | Status | Tenant | Site      | Location    | Rack | Role                 | Manufacturer | Type                   | IP Address     |
+| ------------ | ------ | ------ | --------- | ----------- | ---- | -------------------- | ------------ | ---------------------- | -------------- |
+| als01        | Active | —      | Snellegem | Server Room | —    | Access Layer Switch  | Ubiquiti     | EdgeSwitch 8 150W      | 10.10.99.13/24 |
+| ap01         | Active | —      | Snellegem | Server Room | —    | Wireless AP          | MikroTik     | hAP ac lite TC         | 10.10.99.10/24 |
+| Blueberrypi  | Active | —      | Snellegem | Server Room | —    | Generic Linux Server | Raspberry Pi | Raspberry Pi 5         | 10.10.30.5/24  |
+| fw01         | Active | —      | Snellegem | Server Room | —    | Firewall             | Fortinet     | FortiGate 40F          | 10.10.99.1/24  |
+| Strawberrypi | Failed | —      | Snellegem | Server Room | —    | Generic Linux Server | Raspberry Pi | Raspberry Pi 4 Model B | 10.10.30.6/24  |
+
+!!! note "IP addressing"
+    Configure IP addressing later in this project.
+
+## Netbox as Ansible inventory 
+### Example inventory file
+
+Test the NetBox inventory by creating a simple playbook with an inventory.yml file that uses the `netbox` plugin to pull devices from NetBox.
+```yaml title="Example inventory.yml file"
+plugin: netbox.netbox.nb_inventory
+api_endpoint: "https://svur9623.cloud.netboxapp.com" #(1)!
+token: "Your NetBox API token here" #(2)!
+validate_certs: false # (3)! 
+config_context: true
+flatten_config_context: true #(4)! 
+interfaces: true
+group_names_raw: true
+group_by:
+  - device_roles
+  - platforms
+  - device_types
+  - tenants
+  - sites
+  - racks
+  - tags
+query_filters: [] # (5)! 
+device_query_filters:
+  - has_primary_ip: "true" #(6)!
+  - status: "active" #(7)!
+flatten_custom_fields: true
+compose:
+  ansible_network_os: platform.name # Very important!
+```
+
+1.  The `api_endpoint` is the URL of your NetBox instance.
+2.  The `token` is the API token that you can generate in the NetBox UI under the user profile.  
+    Use this token to authenticate with the NetBox API and pull the inventory data.
+3.  Set to false if using self-signed certificates
+4.  Needed to access config context values directly in hostvars (ansible_connection)
+5.  Optional: Add filters to limit the devices included in the inventory
+6.  Optional: Only include devices with a primary IP address
+7.  Optional: Only include active devices
+
