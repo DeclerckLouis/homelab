@@ -22,7 +22,8 @@ nav = [
       ]},
       { "Systems" = [
           { "Overview" = "homelab/02_systems/01_overview.md" },
-          { "AWX-NetBox" = "homelab/02_systems/02_awx.md" }
+          { "K3s" = "homelab/02_systems/02_k3s.md" },
+          { "AWX-NetBox" = "homelab/02_systems/03_awx.md" }
       ]}
   ]},
   {"status" = "status.md" }

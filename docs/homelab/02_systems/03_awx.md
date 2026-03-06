@@ -14,33 +14,7 @@ For this project, a free Netbox Cloud instance was used, provided by [netbox.dev
 ## Local environment installation and configuration
 
 AWX does not run on ARM platforms, so this setup uses RHEL on a dedicated machine.
-
-### K3s setup
-
-Install k3s using the quickstart script.  
-This is the most basic way to get k3s up and running.  
-
-```bash title="Command to install k3s"
-sudo dnf install -y kernel-modules-extra #(1)!
-curl -sfL https://get.k3s.io | sh -
-watch sudo kubectl get nodes #(2)!
-```
-
-1.  The `kernel-modules-extra` package is required for k3s to function properly.  
-    See [k3s requirements](https://docs.k3s.io/installation/requirements?os=rhel)
-2.  The `watch` command can be interrupted with `Ctrl + C` once the node is ready.  
-
-Next, configure the local firewall to allow the network used by k3s to communicate properly.  
-See [k3s requirements](https://docs.k3s.io/installation/requirements?os=rhel).
-```bash title="Commands to configure firewall for k3s"
-firewall-cmd --permanent --add-port=6443/tcp #apiserver
-firewall-cmd --permanent --zone=trusted --add-source=10.42.0.0/16 #pods
-firewall-cmd --permanent --zone=trusted --add-source=10.43.0.0/16 #services
-firewall-cmd --reload
-```
-!!! warning
-    Skipping this step will result in the awx-web deployment failing and getting stuck in `crashloopbackoff` state.
-
+For the installation of k3s, see the [k3s installation page](./02_k3s.md).
 ### AWX setup
 
 #### Clone repository
