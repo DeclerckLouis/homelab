@@ -14,7 +14,8 @@ For this project, a free Netbox Cloud instance was used, provided by [netbox.dev
 ## Local environment installation and configuration
 
 AWX does not run on ARM platforms, so this setup uses RHEL on a dedicated machine.
-For the installation of k3s, see the [k3s installation page](./02_k3s.md).
+For the installation of k3s, see the [k3s installation page](./02_k3s.md).  
+
 ### AWX setup
 
 #### Clone repository
