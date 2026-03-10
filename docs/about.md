@@ -14,7 +14,7 @@ I am a **Systems Engineer** and **IT Specialist** passionate about building reli
 ### 🛠️ Technical Toolkit
 * **IaC & Automation:** Ansible (Event-Driven), Terraform, Python, Bash, PowerShell.
 * **Virtualization & Orchestration:** Proxmox VE, Kubernetes (k3s), Docker.
-* **Networking:** Fortinet Firewalls, Cilium CNI, IPv6 Routing, NIS2 Compliance.
+* **Networking:** Fortinet Firewalls, Cilium CNI, IPv6 Routing.
 * **Identity & Monitoring:** Active Directory/Entra ID, FreeIPA, Zabbix, Netbox.
 
 ---
