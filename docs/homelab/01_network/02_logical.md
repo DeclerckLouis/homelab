@@ -1,14 +1,14 @@
 # Logical layout
 
 ## 1. Business drivers and goals
-The **Packetflow Homelab** network typically serves two primary functions:
-1.  **Production Home Network:** Providing stable, high-speed internet access for daily use (working from home, streaming, gaming).
-2.  **Experimental Lab:** A playground for learning networking concepts (IPv6, BGP, SD-WAN, segmentation).
+The **Packetflow Homelab** network typically serves two primary functions:  
+1.  **Production Home Network:** Providing stable, high-speed internet access for daily use (working from home, streaming, gaming).  
+2.  **Experimental Lab:** A playground for learning networking concepts (IPv6, BGP, SD-WAN, segmentation).  
 
-**Key Goals:**
-- **Strict Segmentation:** Isolating "Home" traffic from "Guest" and "Server" traffic.
-- **IPv6 First:** Implementing a dual-stack network with a focus on IPv6.
-- **Vendor Diversity:** Gaining proficiency with Fortinet, Ubiquiti, and MikroTik ecosystems.
+**Key Goals:**  
+- **Strict Segmentation:** Isolating "Home" traffic from "Guest" and "Server" traffic.  
+- **IPv6 First:** Implementing a dual-stack network with a focus on IPv6.  
+- **Vendor Diversity:** Gaining proficiency with Fortinet, Ubiquiti, and MikroTik ecosystems.  
 
 ## 2. Global Network Design
 The network architecture is designed to support a multi-site topology, although currently only the primary site is active.
